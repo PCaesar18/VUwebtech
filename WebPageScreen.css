@@ -5,17 +5,48 @@ body {
   margin-bottom: 5%;
   margin-top: 2%;
   color: #F6F6E8;
-  background-color: #404040
-
+  background-color: #404040;
+  font-family: "Helvetica", "Arial", "sans-serif";
 }
+
+
 a {
   text-decoration: none;
 }
 
-body {
+
+h1 {
+  text-align: center;
+  border: 1px solid black;
+
+
+}
+.jacked {
   background-image: url("headphone_jack.png");
   background-repeat:no-repeat;
+  background-position:center center;
+  background-attachment: scroll;
+  background-size: 100% 100%;
+  padding:100px 50px;
+
 }
+
+.navigation{
+background-color: #333;
+  overflow: hidden;
+}
+.navigation a {
+    float: none;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
