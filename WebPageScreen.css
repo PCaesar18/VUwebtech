@@ -19,7 +19,7 @@ width:738px;
 
 #headerTitle
 {
-position:left;
+position:center;
 left:30px;
 top:30px;
 color:#F6F6E8;
@@ -68,7 +68,7 @@ background-color: #333;
   overflow: hidden;
 }
 .navigation a {
-    float: none;
+    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
@@ -76,9 +76,35 @@ background-color: #333;
     font-size: 17px;
 }
 
+table {
+  float:right;
+background-color: grey;
+caption-side: top;
+border: 3px solid black;
 
+}
 
+caption {
+font-weight: bold;
+font-size: 3em;
 
+}
+
+tr {
+
+}
+
+th {
+background-color: #D43F3F;
+}
+
+td {
+border: 1px solid black;
+}
+.models {
+  width: 50%;
+  height: 50%;
+}
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
