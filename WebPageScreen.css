@@ -112,6 +112,7 @@ caption {
 font-weight: bold;
 font-size: 3em;
 text-align: center;
+caption-side: bottom;
 }
 
 tr {
@@ -310,6 +311,8 @@ input,textarea {
 .form-row input:focus {
 background-color: yellow;
 }
+
+img.explination { vertical-align: bottom; }
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
