@@ -43,9 +43,6 @@ font-family:Arial, Helvetica, sans-serif;
 .navigation{
 background-color: #333;
   overflow: hidden;
-  border: 2px;
-  border-radius: 10px;
-  position: relative;
 }
 .navigation a {
     color: #F6F6E8;
@@ -56,13 +53,7 @@ background-color: #333;
     float: right;
     font-family: "Helvetica";
 }
-.navigation a:hover {
-  color: pink;
-}
 
-.navigation a:active {
-  color: blue;
-}
 a:link{
  text-decoration: none;
 }
@@ -94,26 +85,12 @@ table {
 float:right;
 background-color: grey;
 caption-side: top;
-border: medium solid black;
+border: 3px solid black;
 }
 caption {
 font-weight: bold;
 font-size: 3em;
 
-#bar
-{
-
-background-repeat:no-repeat;
-height:55px;
-width:750px;
-line-height:55px;
-padding-left:20px;
-padding-right:20px;
-}
-
-.navigation{
-background-color: #333;
-  overflow: hidden;
 }
 
 tr {
@@ -126,7 +103,6 @@ background-color: #D43F3F;
 
 td {
 border: 1px solid black;
-border-radius: 5px;
 text-align: center;
 width: 20%;
 height: auto;
@@ -135,20 +111,6 @@ height: auto;
 .models {
   width: 100%;
   height: auto%;
-}
-
-.motivation {
-
-}
-.location{
-  float: left;
-  height: 200px;
-  width:300px;
-  background-color: #00ACE9;
-}
-.hours {
-  margin: 0 auto;
-  background-color: #D43F3F;
 }
 
 /*#00ACE9 blue
