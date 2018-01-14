@@ -19,6 +19,21 @@ body {
   background-size: cover;
 
 }
+
+div.orphan {
+  background-color: #00ACE9;
+  height: auto;
+  columns: 3;
+  orphans: 3;
+}
+
+div.widow{
+  background-color: #00ACE9;
+  height: auto;
+  columns: 3;
+  widow: 3;
+}
+
 .bannerTitle
 {
   text-align:center;
@@ -40,12 +55,18 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
+
+@media print {
+    div {page-break-after: auto;}
+    div {page-break-before: auto;}
+}
+
 ul.otherthings {
  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
  list-style-position: outside;
 }
   ul.lists {
-list-style-type: circle;
+list-style-type: circle inside;
 }
 
 
