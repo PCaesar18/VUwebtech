@@ -1,50 +1,76 @@
 
 body {
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 1%;
+  margin-right: 1%;
   margin-bottom: 5%;
-  margin-top: 2%;
+  margin-top: 0%;
   color: #F6F6E8;
   background-color: #404040;
   font-family: "Helvetica", "Arial", "sans-serif";
+  height: 100%;
 }
 
-#header
-{
-background-image:url(header.png);
-background-repeat:no-repeat;
-height:111px;
-width:738px;
-}
+.bannerimage {
+  background-image: url("https://gearburnssl-sndytsvoxozgokstuvcm.netdna-ssl.com/wp-content/uploads/2017/08/headphone-jack.jpg");
+  height: 50%;
+  background-repeat:no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
 
-#headerTitle
+}
+.bannerTitle
 {
-position:center;
-left:30px;
-top:30px;
-color:#F6F6E8;
-text-align:left;
-font-size:34px;
+text-align:center;
+color: black;
+font-size:4em;
+padding-top: 100px;
+
 font-weight:bold;
 font-family:Arial, Helvetica, sans-serif;
 }
-
-#headerSubText
+.bannerSubText
 {
-position:left;
+text-align: center;
 left:33px;
 top:30px;
-color:#F6F6E8;
-text-align:left;
-font-size:16px;
+color: black;
+font-size:26px;
 font-weight:bold;
 font-family:Arial, Helvetica, sans-serif;
 }
 
-
-a {
-  text-decoration: none;
+.navigation{
+background-color: #333;
+  overflow: hidden;
 }
+.navigation a {
+    color: #F6F6E8;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    float: right;
+    font-family: "Helvetica";
+}
+
+a:link{
+ text-decoration: none;
+}
+
+/*  text-decoration: none;
+  color: blue;
+}
+a:hover{
+color: pink;
+}
+a:visited{
+color: darkblue;
+}
+a:active{
+  color: purple;
+}*/
+
 
 
 h1 {
@@ -53,37 +79,14 @@ h1 {
 
 
 }
-.jacked {
-  background-image: url("headphone_jack.png");
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-attachment: scroll;
-  background-size: 100% 100%;
-  padding:100px 50px;
 
-}
-
-.navigation{
-background-color: #333;
-  overflow: hidden;
-}
-.navigation a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
 
 table {
-  float:right;
+float:right;
 background-color: grey;
 caption-side: top;
 border: 3px solid black;
-
 }
-
 caption {
 font-weight: bold;
 font-size: 3em;
@@ -91,7 +94,7 @@ font-size: 3em;
 }
 
 tr {
-
+height: 30px;
 }
 
 th {
@@ -100,11 +103,16 @@ background-color: #D43F3F;
 
 td {
 border: 1px solid black;
+text-align: center;
+width: 20%;
+height: auto;
 }
+
 .models {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: auto%;
 }
+
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
