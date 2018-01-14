@@ -146,6 +146,7 @@ caption.hours {
   border-radius: 15px;
 }
 
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -229,6 +230,11 @@ body {
     margin-bottom: 15px;
     padding-right: 20px;
   }
+=======
+fieldset {
+  border-color: black;
+  border-radius: 5px;
+>>>>>>> 02e74e1fc422c8294f7a3fb7c26f0be5843acfd3
 }
 
 /*#00ACE9 blue

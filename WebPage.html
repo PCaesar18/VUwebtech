@@ -142,6 +142,7 @@
     <h2>Our Location</h2>
     <img class="footer_location_image" alt="Location" src="http://blog.socialitysquared.com/wp-content/uploads/2010/09/iStock_000006260161Small.jpg">
   </div>
+
   <div class= "footer_item" id="hours">
     <table class="hours">
       <caption class="hours"> Store Hours </caption>
@@ -155,8 +156,24 @@
         <tr><th>Sunday</th><td>Closed</td></tr>
     </table>
   </div>
-  <div>
-    <h2  class="footer_item" id="contact">Contact Us!</h2>
+
+  <div class="footer_item" id="contact"class="form">
+    <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
+      <fieldset>
+        <label>Name
+          <input type="text" name="firstname" placeholder="Your name">
+        </label>
+
+        <label>Email adress
+          <input type="email" name="email_address" placeholder="name@domain.com">
+        </label>
+
+        <label>Your question
+          <textarea name="subject" placeholder="Your question goes here..."></textarea>
+        </label>
+        <input type="submit" value="Sent">
+      </fieldset>
+    </form>
   </div>
 </div>
 
