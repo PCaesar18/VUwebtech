@@ -128,7 +128,7 @@ height: auto;
 }
 img.footer_location_image {
   width: 450px;
-  height: 270px; 
+  height: 270px;
   background-repeat:no-repeat;
   background-position: center;
   border-radius: 5px;
@@ -144,6 +144,11 @@ caption.hours {
   border-bottom: solid black;
   background-color: #D43F3F;
   border-radius: 15px;
+}
+
+fieldset {
+  border-color: black;
+  border-radius: 5px;
 }
 
 /*#00ACE9 blue
