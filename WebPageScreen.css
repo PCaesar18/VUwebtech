@@ -59,7 +59,7 @@ div.widow {
 
 ul.otherthings {
   list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 ul.lists {
