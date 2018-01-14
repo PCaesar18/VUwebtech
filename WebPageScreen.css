@@ -312,7 +312,7 @@ input,textarea {
 background-color: yellow;
 }
 
-img.explination { vertical-align: bottom; }
+img.explination { vertical-align: top; }
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
