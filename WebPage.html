@@ -1,247 +1,239 @@
 <!DOCTYPE HTML5(experimental)>
 <html>
   <head>
-
     <title>
       Jacked Phones
     </title>
      <link rel="stylesheet" type="text/css" href="WebPageScreen.css">
   </head>
-  <div class="bannerimage">
+  <body>
+    <div class="bannerimage">
         <div class="bannerTitle">Jacked Phones</div>
-        <div class="bannerSubText"><p><q>We put headphones back in phones!</q></p></div>
-  </div>
-  <nav class="navigation">
-    <a href="#location">Location</a>
-    <a href="#hours">Store Hours</a>
-    <a href="#contact">Contact</a>
-    <a href="#motivation">About us</a>
-    <a href="#models">Available models</a>
-  </nav>
+        <div class="bannerSubText">
+          <p><q>We put headphones back in phones!</q></p>
+        </div>
+    </div>
+
+    <div>
+      <nav class="navigation">
+        <a href="#location">Location</a>
+        <a href="#hours">Store Hours</a>
+        <a href="#contact">Contact</a>
+        <a href="#motivation">About us</a>
+        <a href="#models">Available models</a>
+      </nav>
+    </div>
+
     <table id="models">
       <caption> Available Models </caption>
       <tr>
           <th>Image</th><th>Brand Name</th><th>Model Name</th><th>Screen Size</th><th>Operating System</th>
       </tr>
-        <tr>
-            <td>
-              <figure>
-                <img class="models" src="https://www.tech4d.it/wp-content/uploads/2017/03/google-pixel-2-leaked-front.jpg" alt="Google Pixel 2">
-              </figure>
-            </td>
-            <td>Google</td>
-            <td><a href="https://en.wikipedia.org/wiki/Pixel_2">Pixel 2</a></td>
-            <td>6-inch</td>
-            <td>Android</td>
-            <tr>
-                <td>
-                  <figure>
-                    <img class="models" src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/iphone7-intro-800x533.jpg" alt="iPhone 7 Plus">
-                  </figure>
-                </td>
-                <td>Apple</td>
-                <td><a href="https://en.wikipedia.org/wiki/IPhone_7">iPhone 7 Plus</a></td>
-                <td>5.5-inch</td>
-                <td>iOS</td>
-                <tr>
-                    <td>
-                      <figure>
-                        <img class="models" src="https://uncrate.com/p/2017/03/samsung-galaxy-s8.jpg" alt="Samsung Galaxy S8">
-                      </figure>
-                    </td>
-                    <td>Samsung</td>
-                    <td><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S8">Galaxy S8</a></td>
-                    <td>5.8-inch</td>
-                    <td>Android</td>
+      <tr>
+        <td>
+          <figure>
+            <img class="models" src="https://www.tech4d.it/wp-content/uploads/2017/03/google-pixel-2-leaked-front.jpg" alt="Google Pixel 2">
+          </figure>
+        </td>
+        <td>Google</td>
+        <td><a href="https://en.wikipedia.org/wiki/Pixel_2">Pixel 2</a></td>
+        <td>6-inch</td>
+        <td>Android</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img class="models" src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/iphone7-intro-800x533.jpg" alt="iPhone 7 Plus">
+          </figure>
+        </td>
+        <td>Apple</td>
+        <td><a href="https://en.wikipedia.org/wiki/IPhone_7">iPhone 7 Plus</a></td>
+        <td>5.5-inch</td>
+        <td>iOS</td>
+      </tr>
+      <tr>
+        <td>
+          <figure>
+            <img class="models" src="https://uncrate.com/p/2017/03/samsung-galaxy-s8.jpg" alt="Samsung Galaxy S8">
+          </figure>
+        </td>
+        <td>Samsung</td>
+        <td><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S8">Galaxy S8</a></td>
+        <td>5.8-inch</td>
+        <td>Android</td>
+      </tr>
     </table>
     <div>
-<form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
-  <table id="user-models">
-  <caption>Request a phone to get jacked!</caption>
-  <tr>
-    <th>Image</th>
-    <th>Brand Name</th>
-    <th>Model Name</th>
-    <th>Screen Size</th>
-    <th>Operating System</th>
-  </tr>
-      <tr>
-          <td>
-              <div class='form-row'>
-              <label for='image'></label>
-              <input id='image' name='image' type='text'/>
-              </div>
-          </td>
-            <td>
-              <div class='form-row'>
-              <label for='brand'></label>
-              <input id='brand' name='brand' type='text'/>
-              </div>
-            </td>
+      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+        <table id="user-models">
+          <caption>Request a phone to get jacked!</caption>
+            <tr>
+              <th>Image</th>
+              <th>Brand Name</th>
+              <th>Model Name</th>
+              <th>Screen Size</th>
+              <th>Operating System</th>
+            </tr>
+            <tr>
+              <td>
+                <div class='form-row'>
+                  <label for='image'></label>
+                  <input id='image' name='image' type='text'/>
+                </div>
+              </td>
+
+              <td>
+                <div class='form-row'>
+                  <label for='brand'></label>
+                  <input id='brand' name='brand' type='text'/>
+                </div>
+              </td>
+
             <td>
               <div class='form-row'>
                 <label for='model'></label>
                 <input id='model' name='model' type='text'/>
               </div>
             </td>
+
             <td>
               <div class='form-row'>
                 <label for='screensize'></label>
                 <input id='screensize' name='screensize' type='text'/>
               </div>
             </td>
+
             <td>
               <div class='form-row'>
-                <label for='os'></label>
-                <input id='os' name='os' type='text'/>
+                <label for='OS'></label>
+                <input id='OS' name='OS' type='text'/>
               </div>
             </td>
-        </tr>
-        <tr>
-          <td>
-            <div class='form-row'>
+          </tr>
+
+          <tr>
+            <td>
+              <div class='form-row'>
               <button>Submit</button>
-            </div>
-          </td>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
 
-        </tr>
-    </table>
+    <section>
+        <div class = "motivation">
+          <h2 id="motivation">Why Reintroduce The Headphone Jack</h2>
+            <p>Below are several reasons why we wanted a headphone jack in our phones(in no particular order)</p>
+            <ul class="lists">
+              <li> We don't like being told what to do </li>
+              <li> Don't you have a pair of headphones that feel like a hug from an old friend that you dont want to use with a dongle?</li>
+              <li> <strong>Donglegate</strong> - <em>nuff said</em></li>
+            </ul>
+        </div>
+      </section>
+      <section>
+        <div class="orphan">
+          <p>We believe that people should be allowed to do whatever they want to their property.</p>
+          <p>Phones are getting more expensive and more complicated, we are here to help you understand what it is you own.</p>
+        </div>
+        <div class="widow">
+          <p>Come on over for friendly customer service.</p>
+          <p>We would also be willing to teach you how to do it yourself!</p>
+        </div>
+      </section>
 
-</form>
+      <section>
+        <div class="more">
+          <p>We have more reasons!</p>
+            <ul class="otherthings">
+              <li>headphone jacks are good for poking tiny things - who doesnt need to poke tiny things?!</li>
+              <li>Don't you love coiling up wires?</li>
+          </ul>
+        </div>
+      </section>
 
-</div>
+      <section>
+        <div class="happened">
+          <h2> What happened? </h2>
+            <dl>
+              <dt>Apple iPhone 7</dt>
+                <dd>
+                  Apple releaed the iPhone 7 and decided that the headphone jack was not needed, they said it was courage but we all know they wanted us to buy their new wireless headphones
+                </dd>
+              <figure>
+                <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/DSC05289-1-980x653.jpg" alt="Google-Pixel" width="304" height="228">
+                  <figcaption>What's wrong here?</figcaption>
+              </figure>
+              <dt> Google Pixel <dt>
+                <dd>
+                  Google unveiled their new pixel line to much fanfare but the lack of headphone jack was increadibly dissapointing. Their reasons for doing this were unclear, however this marked the beggining of the end of headphone jacks.
+                <dd>
+              <figure>
+                <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/10/IMG_0276-800x533.jpg" alt="iPhone6 and 7" width="304" height="228">
+                  <figcaption>The start of the end.</figcaption>
+              </figure>
+            </dl>
+        </div>
+      </section>
 
-<section>
-<body>
-  <div class="motivation">
-    <h2 id="motivation">Why Reintroduce The Headphone Jack</h2>
-    <p>Below are several reasons why we wanted a headphone jack in our phones(in no particular order)</p>
-    <ul class="lists">
-        <li> We don't like being told what to do </li>
-        <li> Don't you have a pair of headphones that feel like a hug from an old friend that you dont want to use with a dongle?</li>
-        <li> <strong>Donglegate</strong> - <em>nuff said</em></li>
-    </ul>
-  </div>
-</section>
-<section>
-  <div class="orphan">
-    <p>We believe that people should be allowed to do whatever they want to their property.</p>
-    <p>Phones are getting more expensive and more complicated, we are here to help you understand what it is you own.</p>
-  </div>
+      <section>
+        <h2>Inspiration for Jacked Phones</h2>
+          <p>Scotty from <a href='https://www.youtube.com/watch?v=utfbE3_uAMA'> strange parts </a> was our inspiration. Watch this video to see how to do this yourself. <em> <strong> Caution:</strong> its extremely hard to do this yourself so its better to come and have us do it for you.</em></p>
+          <p>It should be noted that these changes do not follow any <abbr title="International Organization for Standardization">ISO</abbr> standards.</p>
+      </section>
 
-  <div class="widow">
-    <p>Come on over for friendly customer service.</p>
-    <p>We would also be willing to teach you how to do it yourself!</p>
-  </div>
-</section>
+      <section>
+        <h2 id="Motivation">Here's what our customers have to say!</h2>
+          <dl>
+            <blockquote>
+              <ul><p>&ldquo;They broke my phone, but at least they were nice about it.&ldquo; - Shela</p></ul>
+              <ul><p>&ldquo;My barometer doesnt work, apparently they told me when they explained what they were doing but I wasn't paying attention and now I'm pissed.&ldquo; - Johny</p></ul>
+            </blockquote>
+          </dl>
+      </section>
 
+      <section>
+        <div class="footer">
+          <div class="footer_item" id="location">
+            <h2>Our Location</h2>
+            <img class="footer_location_image" alt="Location" src="http://blog.socialitysquared.com/wp-content/uploads/2010/09/iStock_000006260161Small.jpg">
+          </div>
 
-<div class="more">
-  <section>
-    <p>We have more reasons!</p>
-    <ul class="otherthings">
-      <li>headphone jacks are good for poking tiny things - who doesnt need to poke tiny things?!</li>
-      <li>Don't you love coiling up wires?</li>
-    </ul>
-  </section>
-</div>
-</div>
+          <div class= "footer_item" id="hours">
+            <table class="hours">
+              <caption class="hours"> Store Hours </caption>
+                <tr><th>Monday</th><td>10am - 4pm</td></tr>
+                <tr><th>Tuesday</th><td>12am - 5pm</td></tr>
+                <tr><th>Wednesday</th><td>Closed</td></tr>
+                <tr><th>Thursday</th><td>10am - 4pm</td></tr>
+                <tr><th>Friday</th><td>10am - 4pm</td></tr>
+                <tr><th>Saterday</th><td>9am - 5pm</td></tr>
+                <tr><th>Sunday</th><td>Closed</td></tr>
+            </table>
+          </div>
 
-<section>
-  <div class="reasons">
-<p/>Below are two reasons why you should buy our phones!<p>
-  <ol>
-    <li> You can plug into all sorts of devices!</li>
-    <li> You wont have to use bluetooth! Which is unreliable</li>
-  </ol>
-</section>
-</div>
-<div class="happened">
-<section>
-<h2> What happened? </h2>
-<dl>
-    <dt>Apple iPhone 7</dt>
-    <dd>
-      Apple releaed the iPhone 7 and decided that the headphone jack was not needed, they said it was courage but we all know they wanted us to buy their new wireless headphones
-    </dd>
+          <div class="footer_item" id="contact">
+            <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
+              <h2> Contact Us!<h2>
+              <fieldset>
+                <label class="name">Name
+                  <input type="text" name="firstname" placeholder="Your name">
+                </label>
 
+                <label class="email">Email adress
+                  <input type="email" name="email_address" placeholder="name@domain.com">
+                </label>
 
-    <figure>
-      <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/DSC05289-1-980x653.jpg" alt="Google-Pixel" width="304" height="228">
-      <figcaption>What's wrong here?</figcaption>
-    </figure>
-
-    <dt> Google Pixel <dt>
-    <dd>
-      Google unveiled their new pixel line to much fanfare but the lack of headphone jack was increadibly dissapointing. Their reasons for doing this were unclear, however this marked the beggining of the end of headphone jacks.
-    <dd>
-      <figure>
-        <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/10/IMG_0276-800x533.jpg" alt="iPhone6 and 7" width="304" height="228">
-        <figcaption>The start of the end.</figcaption>
-      </figure>
-</dl>
-</section>
-</div>
-<section>
-  <h2>Inspiration for Jacked Phones</h2>
-  <p>Scotty from <a href='https://www.youtube.com/watch?v=utfbE3_uAMA'> strange parts </a> was our inspiration. Watch this video to see how to do this yourself. <em> <strong> Caution:</strong> its extremely hard to do this yourself so its better to come and have us do it for you.</em></p>
-  <p>It should be noted that these changes do not follow any <abbr title=" International Organization for Standardization">ISO</abbr> standards.</p>
-</section>
-
-<section>
-  <h2 id="Motivation">Here's what our customers have to say!</h2>
-  <dl>
-    <blockquote>
-      <ul><p>&ldquo;They broke my phone, but at least they were nice about it.&ldquo; - Shela</p></ul>
-      <ul><p>&ldquo;My barometer doesnt work, apparently they told me when they explained what they were doing but I wasn't paying attention and now I'm pissed.&ldquo; - Johny</p></ul>
-    </blockquote>
-  </dl>
-</section>
-
-<div class="footer">
-  <div class="footer_item" id="location">
-    <h2>Our Location</h2>
-    <img class="footer_location_image" alt="Location" src="http://blog.socialitysquared.com/wp-content/uploads/2010/09/iStock_000006260161Small.jpg">
-  </div>
-
-  <div class= "footer_item" id="hours">
-    <table class="hours">
-      <caption class="hours"> Store Hours </caption>
-        <tr><th>Monday</th><td>10am - 4pm</td></tr>
-        <tr><th>Tuesday</th><td>12am - 5pm</td></tr>
-        <tr><th>Wednesday</th><td>Closed</td></tr>
-        <tr><th>Thursday</th><td>10am - 4pm</td></tr>
-        <tr><th>Friday</th><td>10am - 4pm</td></tr>
-        <tr><th>Saterday</th><td>9am - 5pm</td></tr>
-        <tr><th>Sunday</th><td>Closed</td></tr>
-    </table>
-  </div>
-
-  <div class="footer_item" id="contact">
-    <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
-      <h2> Contact Us!<h2>
-      <fieldset>
-        <label class="name">Name
-          <input type="text" name="firstname" placeholder="Your name">
-        </label>
-<<<<<<< HEAD
-        <label>Email adress
-=======
-
-        <label class="email">Email adress
->>>>>>> 1efe3c389bd6a83bbddd412dfe63f680e780f25d
-          <input type="email" name="email_address" placeholder="name@domain.com">
-        </label>
-
-        <label class="question">Your question
-          <textarea name="subject" placeholder="Your question goes here..."></textarea>
-        </label>
-        <input type="submit" value="Sent">
-      </fieldset>
-    </form>
-  </div>
-</div>
-
-
+                <label class="question">Your question
+                  <textarea name="subject" placeholder="Your question goes here..."></textarea>
+                </label>
+                <input type="submit" value="Submit">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+    </section>
   </body>
 </html>
