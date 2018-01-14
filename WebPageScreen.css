@@ -40,10 +40,14 @@ body {
   font-family:Arial, Helvetica, sans-serif;
 }
 
-
-  ul.a {
+ul.otherthings {
+ list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+ list-style-position: outside;
+}
+  ul.lists {
 list-style-type: circle;
 }
+
 
 
 
