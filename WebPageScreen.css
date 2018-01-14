@@ -41,6 +41,9 @@ body {
 }
 
 
+  ul.a {
+list-style-type: circle;
+}
 
 
 
@@ -218,6 +221,11 @@ body {
     width: 250px;
     height: initial;
   }
+  .submit button{
+    width: auto;
+    height: auto;
+    align-items: middle;
+  }
   .form-row label {
     text-align: right;
     width: 120px;
@@ -251,6 +259,31 @@ input,textarea {
   border-radius: 2px;
   margin-top: 6px;
   padding: 8px;
+}
+
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background-color: #76AEED;
+}
+
+.form-row button:active {
+  background-color: #407FC7;
+}
+.form-row input:focus {
+background-color: yellow;
 }
 /*#00ACE9 blue
 #D43F3F red
