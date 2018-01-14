@@ -145,12 +145,32 @@ caption.hours {
   background-color: #D43F3F;
   border-radius: 15px;
 }
-
 fieldset {
   border-color: black;
   border-radius: 5px;
+  background-color: grey;
+  margin-top: 1px;
+  width: auto;
+  height:240px;
+  margin-right: 3%;
+  margin-left: 3%;
 }
-
+/*label.name {
+  margin: auto;
+  width: 50%;
+  border: 1px solid green;
+  padding: 10px;
+}*/
+label {
+  font-size: 16px;
+}
+input,textarea {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 6px;
+  padding: 8px;
+}
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
