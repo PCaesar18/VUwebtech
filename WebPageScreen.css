@@ -57,19 +57,13 @@ background-color: #333;
 a:link{
  text-decoration: none;
 }
-
-/*  text-decoration: none;
-  color: blue;
-}
 a:hover{
 color: pink;
 }
-a:visited{
-color: darkblue;
-}
 a:active{
-  color: purple;
-}*/
+  color: blue;
+}
+
 
 
 
@@ -80,7 +74,6 @@ h1 {
 
 }
 
-
 table {
 float:right;
 background-color: grey;
@@ -90,6 +83,7 @@ border: 3px solid black;
 caption {
 font-weight: bold;
 font-size: 3em;
+text-align: center;
 
 }
 
@@ -99,6 +93,7 @@ height: 30px;
 
 th {
 background-color: #D43F3F;
+text-align: center;
 }
 
 td {
@@ -110,7 +105,45 @@ height: auto;
 
 .models {
   width: 100%;
-  height: auto%;
+  height: auto;
+}
+
+.footer{
+  background-color: white;
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+}
+.footer_item{
+  background-color: #6A9A1F;
+  width: 30%;
+  height: 350px;
+  float: left;
+  margin: 20px 1.15%;
+  margin-top: 60px;
+  text-align: center;
+  border-radius: 15px;
+  border: 3px inset black;
+  border- spacing: 5px;
+}
+img.footer_location_image {
+  width: 450px;
+  height: 270px; 
+  background-repeat:no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+table.hours{
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 15px 3%;
+  border-radius: 5px;
+}
+caption.hours {
+  font-size: 3.5em;
+  border-bottom: solid black;
+  background-color: #D43F3F;
+  border-radius: 15px;
 }
 
 /*#00ACE9 blue
