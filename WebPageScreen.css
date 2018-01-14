@@ -1,4 +1,3 @@
-
 body {
   margin-left: 1%;
   margin-right: 1%;
@@ -17,7 +16,6 @@ body {
   background-position: center;
   position: relative;
   background-size: cover;
-
 }
 
 div.orphan {
@@ -27,15 +25,14 @@ div.orphan {
   orphans: 3;
 }
 
-div.widow{
+div.widow {
   background-color: #00ACE9;
   height: auto;
   columns: 3;
   widow: 3;
 }
 
-.bannerTitle
-{
+.bannerTitle {
   text-align:center;
   color: white;
   font-size:4em;
@@ -44,8 +41,7 @@ div.widow{
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.bannerSubText
-{
+.bannerSubText {
   text-align: center;
   left:33px;
   top:30px;
@@ -57,41 +53,42 @@ div.widow{
 
 
 @media print {
-    div {page-break-after: auto;}
-    div {page-break-before: auto;}
+  div {page-break-after: auto;}
+  div {page-break-before: auto;}
 }
 
 ul.otherthings {
- list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
- list-style-position: outside;
-}
-  ul.lists {
-list-style-type: circle inside;
+  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
+  list-style-position: outside;
 }
 
-
-
+ul.lists {
+  list-style-type: circle inside;
+}
 
 .navigation{
   background-color: #333;
   overflow: hidden;
 }
+
 .navigation a {
-    color: #F6F6E8;
-    text-align: center;
-    padding: 20px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    float: right;
-    font-family: "Helvetica";
+  color: #F6F6E8;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  float: right;
+  font-family: "Helvetica";
 }
 
 a:link{
- text-decoration: none;
+  text-decoration: none;
 }
+
 a:hover{
-color: pink;
+  color: pink;
 }
+
 a:active{
   color: blue;
 }
@@ -102,33 +99,33 @@ h1 {
 }
 
 table {
-float:right;
-background-color: grey;
-caption-side: top;
-border: 3px solid black;
+  float:right;
+  background-color: grey;
+  caption-side: top;
+  border: 3px solid black;
 }
 
 caption {
-font-weight: bold;
-font-size: 3em;
-text-align: center;
-caption-side: bottom;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  caption-side: bottom;
 }
 
 tr {
-height: 30px;
+  height: 30px;
 }
 
 th {
-background-color: #D43F3F;
-text-align: center;
+  background-color: #D43F3F;
+  text-align: center;
 }
 
 td {
-border: 1px solid black;
-text-align: center;
-width: 20%;
-height: auto;
+  border: 1px solid black;
+  text-align: center;
+  width: 20%;
+  height: auto;
 }
 
 .models {
@@ -136,13 +133,13 @@ height: auto;
   height: auto;
 }
 
-.footer{
+.footer {
   background-color: white;
   height: 500px;
   width: 100%;
   border-radius: 15px;
 }
-.footer_item{
+.footer_item {
   background-color: #6A9A1F;
   width: 30%;
   height: 350px;
@@ -163,7 +160,7 @@ img.footer_location_image {
   border-radius: 5px;
 }
 
-table.hours{
+table.hours {
   border-collapse: separate;
   border-spacing: 3px;
   margin: 15px 3%;
@@ -236,29 +233,29 @@ body {
 @media only screen and (min-width: 700px) {
   .speaker-form-header,
   .speaker-form {
-    width: 600px;
-  }
-  .form-row {
-    flex-direction: row;
-    align-items: flex-start; /* To avoid stretching */
-    margin-bottom: 20px;
-  }
-  .form-row input[type='text'] {
-    width: 250px;
-    height: initial;
-  }
-  .submit button{
-    width: auto;
-    height: auto;
-    align-items: middle;
-  }
-  .form-row label {
-    text-align: right;
-    width: 120px;
-    margin-top: 7px;
-    margin-bottom: 15px;
-    padding-right: 20px;
-  }
+  width: 600px;
+}
+.form-row {
+  flex-direction: row;
+  align-items: flex-start; /* To avoid stretching */
+  margin-bottom: 20px;
+}
+.form-row input[type='text'] {
+  width: 250px;
+  height: initial;
+}
+.submit button {
+  width: auto;
+  height: auto;
+  align-items: middle;
+}
+.form-row label {
+  text-align: right;
+  width: 120px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  padding-right: 20px;
+}
 
 fieldset {
   border-color: black;
@@ -270,15 +267,18 @@ fieldset {
   margin-right: 3%;
   margin-left: 3%;
 }
+
 label.name {
   margin: auto;
   width: 50%;
   border: 1px solid green;
   padding: 10px;
 }
+
 label {
   font-size: 16px;
 }
+
 input,textarea {
   width: 100%;
   border: 1px solid black;
@@ -290,13 +290,10 @@ input,textarea {
 .form-row button {
   font-size: 16px;
   font-weight: bold;
-
   color: #FFFFFF;
   background-color: #5995DA;
-
   border: none;
   border-radius: 3px;
-
   padding: 10px 40px;
   cursor: pointer;
 }
@@ -309,10 +306,12 @@ input,textarea {
   background-color: #407FC7;
 }
 .form-row input:focus {
-background-color: yellow;
+  background-color: yellow;
 }
 
-img.explination { vertical-align: top; }
+img.explination {
+  vertical-align: top;
+}
 /*#00ACE9 blue
 #D43F3F red
 #6A9A1F green
