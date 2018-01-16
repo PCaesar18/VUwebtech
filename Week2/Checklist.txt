@@ -1,4 +1,5 @@
 Assignment 2
+
 Your job is to extend, with the help of a text editor, the HTML and CSS submitted for Assignment 1.
 The main goal is to use JavaScript to replace the static content in your product table with dynamic content (see task 3 below). Please make all tasks in the order given (we recommend you "warm up" by first doing task 1 and 2 before you do 3.
 Task 4 is easier if you first do 3).
