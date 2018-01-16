@@ -39,7 +39,7 @@ div.widow {
   font-size:4em;
   padding-top: 100px;
   font-weight:bold;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:"Arial", "Helvetica",  "sans-serif";
 }
 
 .bannerSubText {
@@ -49,7 +49,7 @@ div.widow {
   color: white;
   font-size:26px;
   font-weight:bold;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:"Arial", "Helvetica",  "sans-serif";
 }
 
 
@@ -317,6 +317,10 @@ img.explination {
   vertical-align: top;
 }
 p.browser {
+<<<<<<< HEAD:WebPageScreen.css
   text-indent: 3mm;
+=======
+  text-indent: 5mm;
+>>>>>>> 3609f2ebd469b6b52bbcd61f344de5bc4c66e3e4:Week2/Screen.css
   text-transform: initial;
 }
