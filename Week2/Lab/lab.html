@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/js" href="myscript.js">
   </head>
   <body>
-    <h1>Lab Matthias and Ceaser</h1>
+    <h1>Lab Matthias and Caesar</h1>
     <h2>
       Lab session 1: Markup
     </h2>
@@ -236,11 +236,39 @@
         </pre>
       </li>
       <li>
+        <a href="http://jquery.com/">jQuery</a>
+          <script src="jquery.js"></script>
+          <script>
+
+          $( document ).ready(function() {
+              $( "a" ).click(function( event ) {
+                  alert( "The link will no longer take you to jquery.com" );
+                  event.preventDefault();
+              });
+          });
+          </script>
+          <p>
+          The differences that were observed was that with the jquery, there would be a popup window that alerts us with what is happening. This comes from the specified 'alert' addition. This did not happen in the code from question 2. Some pros of using the jquery method is that it works with a lot of different codes while the other version is more limited to its code diversity.
+          Some cons of the jquery code however is that it looks very complicated as well as that you need a very large additional jquery file in the same directory to have the jquery code work.
+
+<<<<<<< HEAD
+          The differences that were observed was that with the jquery, there would be a popup window that alerts us with what is happening. This comes from the specified 'alert' addition. This did not happen in the code from question 2.
+        </li>
+=======
+          The pros of the other method are quite similar to the cons of the jquery method in that it is easier to understand and code, however a con is that it does not provide a nice warning or pop up window.
+        </p>
+      </li>
+>>>>>>> de35a1e63b74c347afe9a23bf44d033ff1174e9b
+      <li>
         Python and JavaScript are very similar because they are both interpreted. From stackoverflow "Javascript and Python are both dynamically typed, whereas javascript is weakly, python strongly typed"<a href='https://stackoverflow.com/questions/1786522/how-different-are-the-semantics-between-python-and-javascript'>stackoverflow</a>. They are also both looked down upon by C++ programmers. They are both higly deployable since you can run JavaScript on billions of devices (smartphones with webbrowsers.)
         Python has immutable data types. JavaScript has no immutable data types.
         Python is a template language and JS is a query language.
       </li>
-      <li></li>
+      <li>
+        <p>
+        AJAX stands for Asynchronous JavaScipt And XML. The first A, from Asynchronous allows for the retrieval of data from the web server to be done in the background. This stops any interference on the existing webpage while still updating areas of the webpage. You do not need to relead the entire webpage everytime for something to process.
+      </p>
+      </li>
       <li>
         <p>
           What is the role of the host objects in JavaScript?
@@ -256,34 +284,10 @@
         </p>
       </li>
       <li>
-        <a href="http://jquery.com/">jQuery</a>
-          <script src="jquery.js"></script>
-          <script>
-
-          $( document ).ready(function() {
-              $( "a" ).click(function( event ) {
-                  alert( "The link will no longer take you to jquery.com" );
-                  event.preventDefault();
-              });
-          });
-          </script>
-
-          The differences that were observed was that with the jquery, there would be a popup window that alerts us with what is happening. This comes from the specified 'alert' addition. This did not happen in the code from question 2.
-        </li>
-      <li>
-        Python and JavaScript are very similar because they are both interpreted. From stackoverflow "Javascript and Python are both dynamically typed, whereas javascript is weakly, python strongly typed"<a href='https://stackoverflow.com/questions/1786522/how-different-are-the-semantics-between-python-and-javascript'>stackoverflow</a>. They are also both looked down upon by C++ programmers. They are both higly deployable since you can run JavaScript on billions of devices (smartphones with webbrowsers.)
-      </li>
-      <li>
         Caesar
       </li>
       <li>
-        What is the role of the host objects in JavaScript? Name two often used host objects. Why are there no equivalents in Java or Python?
-      </li>
-      <li>
-        Caesar
-      </li>
-      <li>
-        8. brifly explain the role of host objects that are built nto the java script language.
+        briefly explain the role of host objects that are built nto the java script language.
         from <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects'>MDN</a> Object and function are the first on the list.
         Object constructor provides a wrapper for a given value <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object'>from</a>.
         Function objects are parsed when the function constructor when it is created.
