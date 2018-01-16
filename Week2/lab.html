@@ -222,7 +222,22 @@
     <ol>
       <li>Using macOS on chrome you can enable JS console by pressing cmd + option + j. Can also be accessed by pressing the chrome toolbar and going to developer tools in more tools. </li>
       <li></li>
-      <li></li>
+      <li> <a href="http://jquery.com/">jQuery</a>
+          <script src="jquery.js"></script>
+          <script>
+            $( document ).ready(function() {
+
+                $( "a" ).click(function( event ) {
+
+                    alert( "As you can see, the link no longer took you to jquery.com" );
+
+                    event.preventDefault();
+
+                });
+
+            });
+          </script>
+        </li>
 
 
     </ol>
