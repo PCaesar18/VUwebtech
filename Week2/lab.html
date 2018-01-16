@@ -235,6 +235,20 @@
         </pre>
       </li>
       <li>
+        <a href="http://jquery.com/">jQuery</a>
+          <script src="jquery.js"></script>
+          <script>
+
+          $( document ).ready(function() {
+              $( "a" ).click(function( event ) {
+                  alert( "The link will no longer take you to jquery.com" );
+                  event.preventDefault();
+              });
+          });
+
+          </script>
+        <li>
+      <li>
         Python and JavaScript are very similar because they are both interpreted. From stackoverflow "Javascript and Python are both dynamically typed, whereas javascript is weakly, python strongly typed"<a href='https://stackoverflow.com/questions/1786522/how-different-are-the-semantics-between-python-and-javascript'>stackoverflow</a>. They are also both looked down upon by C++ programmers. They are both higly deployable since you can run JavaScript on billions of devices (smartphones with webbrowsers.)
       </li>
       <li>What is the role of the host objects in JavaScript? Name two often used host objects. Why are there no equivalents in Java or Python?</li>
