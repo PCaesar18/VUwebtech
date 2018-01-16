@@ -4,6 +4,7 @@ Your job is to extend, with the help of a text editor, the HTML and CSS submitte
 The main goal is to use JavaScript to replace the static content in your product table with dynamic content (see task 3 below). Please make all tasks in the order given (we recommend you "warm up" by first doing task 1 and 2 before you do 3.
 Task 4 is easier if you first do 3).
 Make sure you understand the learning goals and have read the tips section on Canvas before you start coding.
+____________________________________________________________________________________________
 
 - [ ] The product and any other tables you created for Assignment 1 should become sortable on all columns by clicking the table headers.
 - [ ] You will be using the same database you used in Assignment 1 to POST your form data to.
@@ -22,7 +23,8 @@ Make sure you understand the learning goals and have read the tips section on C
 - [ ] The result should be that users of your page can add new items without leaving or reloading the entire page, and that the submitted form data is posted in JSON to the server using an AJAX POST request.
 - [ ] Note: there are alternative ways to achieve this, discuss with your lab partner how you will handle this before you start coding.
 
-- [ ] Submission 
+_____________________________________________________________________________________________
+Submission 
 - [ ] Include URIs references to the appropriate CSS and JavaScript libraries in the head element of the HTML file.
 - [ ] Use of URIs referring to the original location of the libraries on the Web is preferred.
 - [ ] Do not submit files from third-party JavaScript libraries that you have downloaded from the Web.
@@ -30,6 +32,31 @@ Make sure you understand the learning goals and have read the tips section on C
 - [ ] If you do so, please indicate this clearly at the top of your HTML file, with a link to the page requesting you to refrain from hotlinking.
 - [ ] Make sure you again include all (Lab 1 - 4) answers to the lab questions into your lab.html HTML file. Check the Canvas site of the course for other details.
 
+___________________________________________________________________________________________
+RUBRIC
+
+SORTABLE TABLE
+This criterion is linked to a learning outcome Sortable tables
+You can receive maximum 20 points for correctly sorting all tables.
+Depending on the JavaScript framework used, sorting the dynamically build table can be much harder than the normal static table.
+A correctly working static table will still be awarded with 15 points.
+
+RESET BUTTON
+You can receive maximum 15 points for a correctly working and well designed reset button.
+
+DYNAMIC TABLE
+You can receive maximum 55 points for implementing the dynamic table:
+30 points are awarded for loading the initial content from the server (using AJAX) and placing the content into the table (using the DOM)
+25 points are awarded for correctly handling the submit button
+use AJAX for sending the form data to the server in JSON
+update the table with the new data without reloading the entire page
+
+MISC.
+The remaining 10 points will be awarded for using good coding style
+Clean separation of HTML and JS
+Clear comments and correct use of filenames as required in the submission instructions.
+
+_________________________________________________________________________________________
 Learning Goals
 * understand the role of client-side scripting
 * understand the notion of interactivity, events and event handler in Web pages
@@ -42,7 +69,8 @@ Learning Goals
 * The student is not required to learn syntactic details of JavaScript by heart but should be able to look these up in the appropriate documentation.
 * Make sure you have read the complete assignment, including the hints and tips, before you start.
 
-* TIPS
+___________________________________________________________________________________________
+TIPS
 
 * While you may also use JavaScript in the body element, it often helps maintainability to keep a clean distinction between your semantic HTML markup in one file and all script code in a separate file, a file that is linked to from the head of your HTML file.
 * This is the preferred way to make this assignment.
