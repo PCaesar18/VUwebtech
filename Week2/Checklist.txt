@@ -93,38 +93,71 @@ ________________________________________________________________________________
 TIPS
 
 * While you may also use JavaScript in the body element, it often helps maintainability to keep a clean distinction between your semantic HTML markup in one file and all script code in a separate file, a file that is linked to from the head of your HTML file.
+
 * This is the preferred way to make this assignment.
+
 * Make sure you have done all lab 3 questions, especially those on the use of developer tools and JQuery.
+
 * Checkout the "recipe" slides (nr 31 and 33 of Lecture 6) on Canvas if you need hints on how to approach the AJAX part of the assignment.
+
 * Tip: all modern browsers support JSON.stringify(object), and knowing how to use it (find examples on the web) will save you a lot of time!
+
 * You are not the first one to discover that it would be nice to sort tables or submit forms without leaving the page.
+
 * So many people already have found and published JavaScript solutions for these problems.
+
 * You are strongly encouraged not to reinvent the wheel, but to reuse as much as possible code that is already freely available on the Web.
+
 * In this assignment, we only use JavaScript on the client-side (browser).
+
 * This means that all material you find online related to server-side programming is most likely irrelevant!
+
 * This include everything related to server-side JavaScript (node.js) and other server-side technologies, including PHP.
+
 * Using JavaScript to change content in your document tree that has been already added into the tree by another piece of JavaScript can often be difficult and lead to unexpected problems.
+
 * Look on the web for solutions.
+
 * For example, sorting the dynamically created table might be much harder than sorting your static tables.
+
 * You are encouraged to get both working, but note that if you only manage to get the static table sortable as required, you will already receive 15 out of 20 points!
+
 * Note that if you do not have a static table because you forgot this in assignment 1, you are free to add one in this assignment!
+
 * Be creative. You will learn much more by exploring than by just copy/pasting examples.
+
 * Invest your time well: explore directions you find useful, do not spend too much effort creating a "fancy" page in the hope to get a higher mark!
+
 * If you make errors in your JavaScript, they may be hard to find.
+
 * Learning how to debug JavaScript is part of the goals of the assignment.
+
 * To simplify debugging, you could make separate pages for the various parts of the assignment and develop them independently, and only merge them into one single page after everything works as expected.
+
 * Make sure you have the right functionality in your browser to see syntax and other errors.
+
 * For example, in Firefox use the "Error Console" under the "Tools" or use the Firebug plugin.
+
 * In Chrome, make sure that you have "Developer mode" turned on and use the "Developer Tools" in the View menu.
+
 * You may also use specific JavaScript debuggers, use the Web to find out how.
+
 * If you cannot find a bug, even after spending a significant amount of time, feel free to ask help from other students during the lab sessions.
+
 * Do not waste hours on a single bug!
+
 * If you post questions to the course mailing list, please provide sufficient information and code fragments for us to be able to help you.
+
 * Explain what does not work and explain what you have tried to get it working.
+
 * If you explain your problem clearly and show what you have already learned, we will be happy to help you!
+
 * If the deadline approaches and you feel you cannot make this assignment without spending an unrealistic amount of time debugging, submit what you have.
+
 * Again, explain what does not work and explain what you have tried to get it working.
+
 * The jQuery library allows you to do AJAX requests (both GET and POST) with only a few lines of code.
+
 * It also hides all the complexities of using the low-level XMLHttpRequest object directly.
 * We therefore advise against the direct use of XMLHttpRequest (except for advanced students).
 * If you find code examples using XMLHttpRequest, look further for examples using the much easier jQuery AJAX methods.
