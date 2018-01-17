@@ -293,13 +293,15 @@ input[type=submit]:hover {
 
 .form-row button {
   font-size: 16px;
+  border: solid black;
+  border-width: 2px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #5995DA;
-  border: none;
   border-radius: 3px;
   padding: 10px 40px;
   cursor: pointer;
+
 }
 
 .form-row button:hover {
@@ -309,18 +311,11 @@ input[type=submit]:hover {
 .form-row button:active {
   background-color: #407FC7;
 }
-.form-row input:focus {
-  background-color: yellow;
-}
 
 img.explination {
   vertical-align: top;
 }
 p.browser {
-<<<<<<< HEAD:WebPageScreen.css
-  text-indent: 3mm;
-=======
   text-indent: 5mm;
->>>>>>> 3609f2ebd469b6b52bbcd61f344de5bc4c66e3e4:Week2/Screen.css
   text-transform: initial;
 }

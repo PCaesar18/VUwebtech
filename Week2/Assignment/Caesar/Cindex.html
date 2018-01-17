@@ -26,7 +26,7 @@
       </nav>
     </div>
 
-    <table id="models">
+    <table id="models" class="tablesorter">
       <caption> Available Models </caption>
       <tr>
           <th>Image</th><th>Brand Name</th><th>Model Name</th><th>Screen Size</th><th>Operating System</th>
@@ -65,6 +65,13 @@
         <td>Android</td>
       </tr>
     </table>
+      <script>
+        $(document).ready(function()
+        {
+            $("#models").tablesorter();
+        }
+        );
+      </script>
     <div>
       <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
         <table id="user-models">
@@ -117,6 +124,21 @@
               <div class='form-row'>
               <button>Submit</button>
               </div>
+            </td>
+            <td>
+              <div class='form-row'>
+                <button id = "reset">Reset</button>
+              </div>
+              <script src="https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset"></script>
+                <script>
+                $(document).ready(function(){
+                    $("reset").click(function(){
+                        $.get("demo_test.asp", function(data, status){
+                            alert("Data: " + data + "\nStatus: " + status);
+                        });
+                    });
+                });
+                </script>
             </td>
           </tr>
         </table>
