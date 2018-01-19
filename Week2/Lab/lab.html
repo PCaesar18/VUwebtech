@@ -308,5 +308,48 @@
     <div class="chart"></div>
     <script src="https://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
     <script  src="d3.js"></script>
+    <h2>
+      Lab session 3:  Client-side Programming, Web Applications, JavaScript and AJAX
+    </h2>
+      <h3> Question 1 </h3>
+    <ol type="a">
+      <li>
+        <p>
+        There are a couple of issues with the tokenizer in the frequency matrix altough it did a great job. One of the issues that can be seen is that there are a lot of words that are very similar to each other. For example such as 'chimney' and 'chimneys', as well as 'choke' and 'choking'. That is were the linguistic models come in to create modified tokens. This would significantly reduce the long list of tokens. Furthermore, there seems to be an occurence where every letter of the alphabet is displayed as a token at least one. These letters could also be removed to improve the tokenizer.
+        </p>
+      </li>
+      <li>
+        <p>
+        It does not make sense to include all of the words in the list, mostly because they are small useless words that are not particularly useful a search query. This is where Heap's law comes into effect, since the law allows for the counting of new words every time. So therefore there is definitely some room for improvement because the most common words should be eliminated. Furthermore, again there are individual letters that are not very useful in any search functionality (such as 't', 's' and 'a') because they have a very low relationship with the main individual book.
+        </p>
+      </li>
+      <li>
+        <p>
+          Yes I do think that it follows Zipf's law because I think that the book is large enough that it includes a very wide range of words, in which you it is easier to spot the Zipf's law into effect. After using the formula in RStudio, this was indeed shown to be the case. Although it seems like it looks like an inverse log function. Zipf's law states that if you have a large enough set of words, the word that occurs most often will be occur twice as much as the word that is second. And the second most frequently used word in the dataset is used twice as much as the third most frequent word.
+        </p>
+      </li>
+      <li>
+        <p>
+          After running the program, the graph does show that Heap's law also holds true for this specific dataset. Heap's law states that as the dictionary, or size of the dataset grows, it will be harder and harder to find new unique words in this dataset. Eventually, if the document is large enough, the line will nearly flat out and reach an invisible horizontal asymptote.
+        </p>
+      </li>
+    </ol>
+      <h3> Question 2 </h3>
+    <ol type="a">
+      <li>
+        <p>
+          The effectiveness of the TF query is a subjective judgement but can be better quantisized by the use of precision and recall. Considering the TF query, I noticed that there were a lot of extra chapters displayed in the result that were unnecessairy since their value was 0. Therefore, the precision was quite high since some of the chapters that were returned, did indeed have our word included. However the recall of the search was worse since, as stated before, only a small fraction of relevant chapters was returned on the overall total of the chapters returned.
+        </p>
+      </li>
+      <li>
+        <p>
+          I think this is because the spider has to search the frequency of every individual word and then give them an associated weight. This weight giving is done considering every other word in the dataset. This could explain the additional load time. Furthermore, the computing and rendering of all the 0.0 points would also explain the extra time it takes.
+        </p>
+      </li>
+      <li>
+        <p>
+        </p>  
+      </li>
+    </ol>
   </body>
 </html>
