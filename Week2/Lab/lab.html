@@ -309,7 +309,7 @@
     <script src="https://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
     <script  src="d3.js"></script>
     <h2>
-      Lab session 3:  Client-side Programming, Web Applications, JavaScript and AJAX
+      Lab session 4: Searching Alice
     </h2>
       <h3> Question 1 </h3>
     <ol type="a">
@@ -348,7 +348,18 @@
       </li>
       <li>
         <p>
-        </p>  
+          The TFIDF based search compared to the TF based seach can be labeled more accurate. This is due to several different reasons. One of them is that the TFIDF based search is logarithmic which allows for the development of a clearer understanding of the general trend. Furthermore, the IDF addition to the TF part is that it takes the inverse document frequency. This allows for more frequenct reoccuring words to filter out more. This can be seen in the table where a more frequent reoccuring word such as 'this' has a lower normalized value than 'things'. In the TFIDF part of the search, there is a better understanding of the value of a word than in the more basic TF based search. Considering precision and recall. I would say that the recall is higher for the TF basec search whereas the precision would be much higher for the TFIDF search. This is because the TFIDFT returns a higher fraction of relevant information than the TF version. This is due to the afformentioned technique of filtering out reoccuring words.
+        </p>
+      </li>
+      <li>
+        <p>
+          If I understand this question correctly, for the first 5 results that were given back to any query, the precision at k = 5 would be significantly low. If 5 is the lowest we are going, and all the other returned results are considered irrelevant, then we can say that at k = 5, the precision would also be very low. However, the smaller the k value, the higher the precision would be.
+        </p>
+      </li>
+      <li>
+        <p>
+          If the tokenizer that was suggested is implemented, therefore creating a modified tokenizer that takes liguistic models into consideration, then the precision would greatly increase because a lot of double terms that are very close to each other, would not be returned. This would result in a wider variety of answers and therefore a better chance for a hit with your query. However, it is uncertain that the recall would be improved. This since a lower fraction of words would be returned because some of them get eliminated in the tokenizing process.
+        </p>
       </li>
     </ol>
   </body>

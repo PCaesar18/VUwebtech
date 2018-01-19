@@ -6,3 +6,13 @@
   margin: 1px;
   color: white;
 }
+
+
+p {
+  width: 80%;
+  text-align: left;
+}
+
+body {
+  background-color: #c0dfd9;
+}
