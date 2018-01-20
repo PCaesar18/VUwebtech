@@ -86,6 +86,7 @@ function sortTable(n) {
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
+//reset function
 $(document).ready(function(){
     $("#submit").click(function(){
       $.ajax({
