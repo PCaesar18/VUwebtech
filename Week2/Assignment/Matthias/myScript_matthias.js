@@ -86,10 +86,11 @@ function sortTable(n) {
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
+//reset function
 $(document).ready(function(){
     $("#reset").click(function(){
-        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe", function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
+        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
+            alert("Your database is reset!");
         });
     });
 });
