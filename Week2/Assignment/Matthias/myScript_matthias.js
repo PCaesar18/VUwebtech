@@ -1,3 +1,4 @@
+//this loads html content from the VU into the table
 $(document).ready(function()
 {
     $.ajax({
