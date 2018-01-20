@@ -102,12 +102,7 @@ h1 {
   border: 1px solid black;
 }
 
-table {
-  float:right;
-  background-color: grey;
-  caption-side: top;
-  border: 3px solid black;
-}
+
 
 caption {
   font-weight: bold;
@@ -116,21 +111,6 @@ caption {
   caption-side: top;
 }
 
-tr {
-  height: 30px;
-}
-
-th {
-  background-color: #D43F3F;
-  text-align: center;
-}
-
-td {
-  border: 1px solid black;
-  text-align: center;
-  width: 20%;
-  height: auto;
-}
 
 .models {
   width: 100%;
@@ -324,3 +304,25 @@ p.browser {
 >>>>>>> 3609f2ebd469b6b52bbcd61f344de5bc4c66e3e4:Week2/Screen.css
   text-transform: initial;
 }
+
+
+
+
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    cursor: pointer;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }
