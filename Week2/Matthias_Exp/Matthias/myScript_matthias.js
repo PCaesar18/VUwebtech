@@ -94,12 +94,12 @@ $(document).ready(function(){
     $("#submit").click(function(e){
 
       $.ajax({
-    url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-    type: "POST",
-    data: JSON.stringify(data),
-    contentType: "application/json",
-    complete: callback
-    });
+      url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+      type: "POST",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      complete: callback
+      });
       e.preventDefault();
 
 

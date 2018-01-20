@@ -30,48 +30,27 @@ $(document).ready(function()
 $(document).ready(function(){
     $("#submit").click(function(event){
       event.preventDefault();
+
       $.ajax({
       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
       type: "POST",
       data: JSON.stringify(data),
       contentType: "application/json",
-      complete: callback,
-      succes  : function(data){
-      $.ajax({
-        //ajax request with paramaters to get a json file from the VU
-          url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
-          type: 'get',
-          dataType:'json',
-          success: function (response)
-          //if succesful do the following
-          {
-            var trHTML = '';
-            //set up an empty var
-            $.each(response, function (key,value) {
-              //for each object in the json file look at the key and the value pair
-               trHTML +=
-               //concatenate the key value pairs that were passed with the correct html tag
-                 '<tr><td>' + value.brand +
-                 '</td><td>' + value.model +
-                 '</td><td>' + value.os +
-                 '</td><td><img src="' + value.image +
-                 '"></td><td>' + value.screensize +
-                 '</td></tr>';
-            });
-              $('#myTable').append(trHTML);
-              //append to table named myTable the string trHTML
-          }
+      complete: callback
       });
-
-
+      /*
+      $.ajax({
+        type: 'post',
+        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+        dataType: 'json',
+        succes  : function(data){
+          alert("You succesfully submitted data");
+          $("#testresult").html(data);
+        }});
+        */
 
     });
-
-
-
-
-
-    
+});
 //this was sourced from stackoverflow https://stackoverflow.com/questions/31074532/using-jquery-to-build-table-rows-from-ajax-response-not-with-static-json-data
 
 
