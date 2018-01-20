@@ -1,6 +1,7 @@
 //this loads html content from the VU into the table
 $(document).ready(function()
 {
+
     $.ajax({
       //ajax request with paramaters to get a json file from the VU
         url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
@@ -86,22 +87,31 @@ function sortTable(n) {
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
-//reset function
+
+
 $(document).ready(function(){
-    $("#submit").click(function(){
+
+    $("#submit").click(function(e){
+
       $.ajax({
-        type: 'post',
-        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-        dataType: 'json',
-        succes  : function(data){
-          alert("You succesfully submitted data");
-          $("#testresult").html(data);
-        }});
-
-
+    url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+    type: "POST",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    complete: callback
     });
+      e.preventDefault();
+
+
+    }
+  );
 });
 
+
+
+
+
+//reset function
 $(document).ready(function(){
     $("#reset").click(function(){
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
