@@ -27,6 +27,20 @@ $(document).ready(function()
         }
     });
 });
+$(document).ready(function(){
+    $("#submit").click(function(event){
+      event.preventDefault();
+      $.ajax({
+        type: 'post',
+        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+        dataType: 'json',
+        succes  : function(data){
+          alert("You succesfully submitted data");
+          $("#testresult").html(data);
+        }});
+
+    });
+});
 //this was sourced from stackoverflow https://stackoverflow.com/questions/31074532/using-jquery-to-build-table-rows-from-ajax-response-not-with-static-json-data
 
 
@@ -87,25 +101,12 @@ function sortTable(n) {
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
 //reset function
-$(document).ready(function(){
-    $("#submit").click(function(){
-      $.ajax({
-        type: 'post',
-        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-        dataType: 'json',
-        succes  : function(data){
-          alert("You succesfully submitted data");
-          $("#testresult").html(data);
-        }});
-
-    });
-});
 
 $(document).ready(function(){
     $("#reset").click(function(event){
-      event.preventDefault();
+      event.preventDefault(); //this prevents the submit button to redirect us to the database page
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
-            alert("Your database is reset!");
+            alert("Your database is reset!"); //a small alert to warn the user that the database is reset
         });
     });
 });
