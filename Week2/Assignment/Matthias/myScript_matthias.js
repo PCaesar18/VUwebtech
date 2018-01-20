@@ -17,8 +17,8 @@ $(document).ready(function()
                '<tr><td>' + value.brand +
                '</td><td>' + value.model +
                '</td><td>' + value.os +
-               '</td><td>' + value.image +
-               '</td><td>' + value.screensize +
+               '</td><td><img src="' + value.image +
+               '"></td><td>' + value.screensize +
                '</td></tr>';
           });
             $('#myTable').append(trHTML);
@@ -83,7 +83,7 @@ function sortTable(n) {
       }
     }
   }
-}
+}//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
 $(document).ready(function(){
     $("#reset").click(function(){
