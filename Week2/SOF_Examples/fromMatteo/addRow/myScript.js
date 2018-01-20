@@ -89,13 +89,14 @@ function sortTable(n) {
 $(document).ready(function(){
     $("#submit").click(function(){
       $.ajax({
-        type: 'GET',
+        type: 'post',
         url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
         dataType: 'json',
         succes  : function(data){
           alert("You succesfully submitted data");
           $("#testresult").html(data);
         }});
+
     });
 });
 

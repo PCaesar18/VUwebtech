@@ -88,6 +88,20 @@ function sortTable(n) {
 
 //reset function
 $(document).ready(function(){
+    $("#submit").click(function(){
+      $.ajax({
+        type: 'post',
+        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+        dataType: 'json',
+        succes  : function(data){
+          alert("You succesfully submitted data");
+          $("#testresult").html(data);
+        }});
+
+    });
+});
+
+$(document).ready(function(){
     $("#reset").click(function(){
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
             alert("Your database is reset!");
