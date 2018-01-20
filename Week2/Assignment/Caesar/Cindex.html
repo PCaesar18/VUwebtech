@@ -118,10 +118,26 @@
                       type: 'GET',
                       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
                       dataType: 'json',
-                      succes  : function(data){
-                        alert("You succesfully submitted data");
-                        $("#testresult").html(data);
-                      }});
+                      success: function (response)
+                      //if succesful do the following
+                      {
+                        var trHTML = '';
+                        //set up an empty var
+                        $.each(response, function (key,value) {
+                          //for each object in the json file look at the key and the value pair
+                           trHTML +=
+                           //concatenate the key value pairs that were passed with the correct html tag
+                             '<tr><td><img src="' + value.image +
+                             '"></td><td>' + value.brand +
+                             '</td><td>' + value.model +
+                             '</td><td>' + value.screensize +
+                             '</td><td>' + value.os +
+                             '</td></tr>';
+                        });
+                          $('#models').append(trHTML);
+                          //append to table named myTable the string trHTML
+                      }
+                  });
                   });
               });
               </script>
