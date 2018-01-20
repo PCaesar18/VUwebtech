@@ -92,7 +92,8 @@ function sortTable(n) {
 $(document).ready(function(){
 
     $("#submit").click(function(e){
-
+      e.preventDefault();
+      $post
       $.ajax({
       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
       type: "POST",
@@ -100,7 +101,7 @@ $(document).ready(function(){
       contentType: "application/json",
       complete: callback
       });
-      e.preventDefault();
+
 
 
     }
