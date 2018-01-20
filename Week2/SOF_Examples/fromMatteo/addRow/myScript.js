@@ -101,6 +101,14 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#reset").click(function(){
+        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
+            alert("Your database is reset!");
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#reset").click(function(){
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe", function(data, status){
             alert("Data: " + data + "\nStatus: " + status);
         });
