@@ -303,22 +303,33 @@ p.browser {
 }
 
 
+table {
+  background-color: grey;
+  caption-side: top;
+  border: 3px solid black;
+  width: 100%;
+}
 
-  table {
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
+caption {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  caption-side: top;
+}
 
-  th {
-    cursor: pointer;
-  }
+tr {
+  height: 30px;
+}
 
-  th, td {
-    text-align: left;
-    padding: 16px;
-  }
+th {
+  background-color: #D43F3F;
+  text-align: center;
+  cursor: pointer;
+}
 
-  tr:nth-child(even) {
-    background-color: #f2f2f2
-  }
+td {
+  border: 1px solid black;
+  text-align: center;
+  width: 20%;
+  height: 50px;
+}

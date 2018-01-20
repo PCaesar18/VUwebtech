@@ -27,21 +27,9 @@
         <a href="#models">Available models</a>
       </nav>
     </div>
-      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post" id="submitform">
         <table id="myTable">
           <thead>
-            <tfoot>
-              <div class='form-row'>
-                <button id = "reset">
-                  Reset
-                </button>
-              </div>
-              <div class='form-row'>
-                <button>
-                  Submit
-                </button>
-              </div>
-            </tfoot>
             <tr>
               <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
               <th align="center" width="50" onclick="sortTable(0)">
@@ -95,6 +83,18 @@
               </td>
             </tr>
           </tbody>
+          <tfoot>
+            <div class='form-row'>
+              <button id = "reset">
+                Reset
+              </button>
+            </div>
+            <div class='form-row'>
+              <button>
+                Submit
+              </button>
+            </div>
+          </tfoot>
         </table>
       </form>
     <section>

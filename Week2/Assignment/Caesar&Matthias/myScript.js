@@ -4,7 +4,7 @@ $(document).ready(function()
     $.ajax({
       //ajax request with paramaters to get a json file from the VU
         url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
-        type: 'get',
+        type: 'GET',
         dataType:'json',
         success: function (response)
         //if succesful do the following
@@ -27,6 +27,19 @@ $(document).ready(function()
         }
     });
 });
+/*
+var form = $('#submitform');
+form.submit(function(event)) {
+  event.preventDefault();
+  $.ajax({
+  url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+  type: "POST",
+  data: form.serialize(),
+  contentType: "application/json",
+  complete: callback
+}
+*/
+
 $(document).ready(function(){
     $("#submit").click(function(event){
       event.preventDefault();
@@ -34,7 +47,7 @@ $(document).ready(function(){
       $.ajax({
       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
       type: "POST",
-      data: JSON.stringify(data),
+      data: JSON.serialize(data),
       contentType: "application/json",
       complete: callback
       });
