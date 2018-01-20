@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="./js/jquery.tablesorter.js"></script>
 	<script type="text/javascript" src="./js/jquery.tablesorter.pager.js"></script>
 </head>
+
 <body>
   <form class="phoneInput" action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
       <table id="insured_list" class="tablesorter">
@@ -80,6 +81,9 @@
 		</select>
 	</form>
 </div>
+
+<div id="animal-info"></div>
+<button id="btn">Fetch Info for 3 New Animals</button>
 <script defer="defer">
 	$(document).ready(function()
     {
@@ -111,6 +115,36 @@ $("#ajax-append").click(function() {
 });
 
 </script>
+
+<script type="text/javascript">
+
+var animalContainer = document.getElementById("animal-info");
+var btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+  var ourRequest = new XMLHttpRequest();
+  ourRequest.open('GET', 'https://wt.ops.labs.vu.nl/api18/f47cbdfe');
+  ourRequest.onload = function() {
+    var ourData = JSON.parse(ourRequest.responseText);
+    renderHTML(ourData);
+  };
+  ourRequest.send();
+
+});
+
+function renderHTML(data) {
+  var htmlString = "";
+
+  for (var i = 0; i < data.length; i++) {
+    htmlString += "<p>" + data[i].brand + "</p>";
+  }
+
+  animalContainer.insertAdjacentHTML('beforeend', htmlString);
+}
+
+</script>
+
+
 
 </body>
 </html>

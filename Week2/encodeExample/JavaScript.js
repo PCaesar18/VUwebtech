@@ -1,73 +1,66 @@
 
 
-let brand = $('#brand').val();
-let os = $('#os').val();
-let image = $('#image').val();
-let screensize = $('#screensize').val();
-let
-let table  = {
-  brand::brand,
-  os::os,
-}
+
+
 function CreateTableFromJSON() {
-    var myBooks = [
-        {
-            "Book ID": "1",
-            "Book Name": "Computer Architecture",
-            "Category": "Computers",
-            "Price": "125.60"
-        },
-        {
-            "Book ID": "2",
-            "Book Name": "Asp.Net 4 Blue Book",
-            "Category": "Programming",
-            "Price": "56.00"
-        },
-        {
-            "Book ID": "3",
-            "Book Name": "Popular Science",
-            "Category": "Science",
-            "Price": "210.40"
-        }
-    ]
+  let brand = $('#brand').val();
+  let model = $('#model').val();
+  let os = $('#os').val();
+  let image = $('#image').val();
+  let screensize = $('#screensize').val();
 
-    // EXTRACT VALUE FOR HTML HEADER.
-    // ('Book ID', 'Book Name', 'Category' and 'Price')
-    var col = [];
-    for (var i = 0; i < myBooks.length; i++) {
-        for (var key in myBooks[i]) {
-            if (col.indexOf(key) === -1) {
-                col.push(key);
-            }
-        }
-    }
+  let table  = {
+    brand::brand,
+    model::model,
+    os::os,
+    image::image,
+    screensize::screensize,
+  }
+  $("button").click(function(){
+  $.post("https://wt.ops.labs.vu.nl/api18/f47cbdfe", table
 
-    // CREATE DYNAMIC TABLE.
-    var table = document.createElement("table");
+  function(data, status){
+      alert("Data: " + "\nStatus: ");
+  });
+});console.log(table);
 
-    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+     // EXTRACT VALUE FOR HTML HEADER.
+     // ('Book ID', 'Book Name', 'Category' and 'Price')
+     var col = [];
+     for (var i = 0; i < myBooks.length; i++) {
+         for (var key in myBooks[i]) {
+             if (col.indexOf(key) === -1) {
+                 col.push(key);
+             }
+         }
+     }
 
-    var tr = table.insertRow(-1);                   // TABLE ROW.
+     // CREATE DYNAMIC TABLE.
+     var table = document.createElement("table");
 
-    for (var i = 0; i < col.length; i++) {
-        var th = document.createElement("th");      // TABLE HEADER.
-        th.innerHTML = col[i];
-        tr.appendChild(th);
-    }
+     // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
 
-    // ADD JSON DATA TO THE TABLE AS ROWS.
-    for (var i = 0; i < myBooks.length; i++) {
+     var tr = table.insertRow(-1);                   // TABLE ROW.
 
-        tr = table.insertRow(-1);
+     for (var i = 0; i < col.length; i++) {
+         var th = document.createElement("th");      // TABLE HEADER.
+         th.innerHTML = col[i];
+         tr.appendChild(th);
+     }
 
-        for (var j = 0; j < col.length; j++) {
-            var tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = myBooks[i][col[j]];
-        }
-    }
+     // ADD JSON DATA TO THE TABLE AS ROWS.
+     for (var i = 0; i < myBooks.length; i++) {
 
-    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-    var divContainer = document.getElementById("showData");
-    divContainer.innerHTML = "";
-    divContainer.appendChild(table);
-}
+         tr = table.insertRow(-1);
+
+         for (var j = 0; j < col.length; j++) {
+             var tabCell = tr.insertCell(-1);
+             tabCell.innerHTML = myBooks[i][col[j]];
+         }
+     }
+
+     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+     var divContainer = document.getElementById("showData");
+     divContainer.innerHTML = "";
+     divContainer.appendChild(table);
+ }
