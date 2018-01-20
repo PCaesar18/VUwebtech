@@ -1,3 +1,54 @@
+$(document).ready(function()
+{
+    $.ajax({
+        url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
+        type: 'get',
+        dataType:'json',
+        success: function (response)
+        {
+          var trHTML = '';
+          $.each(response, function (key,value) {
+             trHTML +=
+               '<tr><td>' + value.brand +
+               '</td><td>' + value.model +
+               '</td><td>' + value.os +
+               '</td><td>' + value.image +
+               '</td><td>' + value.screensize +
+               '</td></tr>';
+          });
+            $('#myTable').append(trHTML);
+        }
+    });
+});
+
+$(document).ready(function()
+{
+    $.ajax({ //ajax method to get JSON file from server and post it
+        url: "getjson.php",
+        type: "POST",
+        dataType:"json",
+        success: function (response)
+        //if the reply is succesful then
+        {
+          var trHTML = '';
+          //createa  variable trHTML
+          $.each(response, function (key,value) {
+            //for each key value pair in the JSON file concat the key value pair and HTML tags and set those equal to trHTML
+             trHTML +=
+                '<tr><td>' + value.brand +
+                '</td><td>' + value.model +
+                '</td><td>' + value.os +
+                '</td><td>' + value.image +
+                '</td><td>' + value.screensize +
+                '</td></tr>';
+          });
+
+            $('#myTable').append(trHTML);
+            //append trHTML to our records table
+        }
+    });
+});
+
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");

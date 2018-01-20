@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="Screen_matthias.css">
       <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Print.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="myScript_matthias.js">
       </script>
-      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js">
-      </script>
+
   </head>
   <body>
     <div class="bannerimage">
@@ -28,206 +28,186 @@
         <a href="#models">Available models</a>
       </nav>
     </div>
+      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+        <table id="myTable">
+          added js need to add html
+          <thead>
+            <tfoot>
+              <div class='form-row'>
+                <button id = "reset">Reset</button>
+              </div>
+              <div class='form-row'>
+                <button>Submit</button>
+              </div>
+            </tfoot>
+            <tr>
+              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                  <th align="center" width="50" onclick="sortTable(0)">Brand</th>
+                  <th align="center" width="100" onclick="sortTable(0)">Model</th>
+                  <th align="center" width="100" onclick="sortTable(0)">OS</th>
+                  <th align="center" width="100" onclick="sortTable(0)">Image</th>
+                  <th align="center" width="150" onclick="sortTable(0)">Screen Size</th>
+              </tr>
 
-    <table id="myTable">
-      <thead>
-      <tfoot>
-        <div class='form-row'>
-          <button id = "reset">Reset</button>
-        </div>
-        <div class='form-row'>
-        <button>Submit</button>
-        </div>
-      </tfoot>
-        <tr>
-         <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-          <th onclick="sortTable(0)">Brand</th>
-          <th onclick="sortTable(1)">Model</th>
-          <th onclick="sortTable(2)">OS</th>
-          <th onclick="sortTable(3)">Image</th>
-          <th onclick="sortTable(4)">Screen Size</th>
-        </tr>
-      </thead>
 
-    <tr>
-      <td>Berglunds snabbkop</td>
-      <td>Sweden</td>
-      <td>Sweden</td>
-      <td>Sweden</td>
-      <td>Sweden</td>
-    </tr>
-    <tr>
-      <td>North/South</td>
-      <td>UK</td>
-      <td>UK</td>
-      <td>UK</td>
-      <td>UK</td>
-    </tr>
-    <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Germany</td>
-      <td>Germany</td>
-      <td>Germany</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Koniglich Essen</td>
-      <td>Germany</td>
-      <td>Germany</td>
-      <td>Germany</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Magazzini Alimentari Riuniti</td>
-      <td>Italy</td>
-      <td>Italy</td>
-      <td>Italy</td>
-      <td>Italy</td>
-    </tr>
-    <tr>
-      <td>Paris specialites</td>
-      <td>France</td>
-      <td>France</td>
-      <td>France</td>
-      <td>France</td>
-    </tr>
-    <tr>
-      <td>Island Trading</td>
-      <td>UK</td>
-      <td>UK</td>
-      <td>UK</td>
 
-    </tr>
-    <tr>
-      <td>Laughing Bacchus Winecellars</td>
-      <td>Canada</td>
-      <td>UK</td>
-      <td>UK</td>
-      <td>UK</td>
-    </tr>
-  </table>
 
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class='form-row'>
+                  <label for='brand'></label>
+                  <input id='brand' name='brand' type='text'/>
+                </div>
+              </td>
+              <td>
+                <div class='form-row'>
+                  <label for='model'></label>
+                  <input id='model' name='model' type='text'/>
+                </div>
+              </td>
+              <td>
+                <div class='form-row'>
+                  <label for='os'></label>
+                  <input id='os' name='os' type='text'/>
+                </div>
+              </td>
+              <td>
+                <div class='form-row'>
+                  <label for='image'></label>
+                  <input id='image' name='image' type='text'/>
+                </div>
+              </td>
+              <td>
+                <div class='form-row'>
+                  <label for='screensize'></label>
+                  <input id='screensize' name='screensize' type='text'/>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    <section>
+      <div>
+        <h2 id="motivation">Why Reintroduce The Headphone Jack</h2>
+          <p>Below are several reasons why we wanted a headphone jack in our phones(in no particular order)</p>
+          <ul class="lists">
+            <li> We don't like being told what to do </li>
+            <li> Don't you have a pair of headphones that feel like a hug from an old friend that you dont want to use with a dongle?</li>
+            <li> <strong>Donglegate</strong> - <em>nuff said</em></li>
+          </ul>
+      </div>
+    </section>
+    <section>
+      <div class="orphan">
+        <p>We believe that people should be allowed to do whatever they want to their property.</p>
+        <p>Phones are getting more expensive and more complicated, we are here to help you understand what it is you own.</p>
+      </div>
+      <div class="widow">
+        <p>Come on over for friendly customer service.</p>
+        <p>We would also be willing to teach you how to do it yourself!</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="more">
+        <p>We have more reasons!</p>
+          <ul class="otherthings">
+            <li>headphone jacks are good for poking tiny things - who doesnt need to poke tiny things?!</li>
+            <li>Don't you love coiling up wires?</li>
+        </ul>
+      </div>
+    </section>
+
+
+      <div class="happened">
+        <h2> What happened? </h2>
+          <dl>
+            <dt>Apple iPhone 7</dt>
+              <dd>
+                Apple releaed the iPhone 7 and decided that the headphone jack was not needed, they said it was courage but we all know they wanted us to buy their new wireless headphones
+              </dd>
+          </dl>
+            <figure>
+              <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/DSC05289-1-980x653.jpg" alt="Google-Pixel" width="304" height="228">
+                <figcaption>What's wrong here?</figcaption>
+            </figure>
+            <dl>
+            <dt> Google Pixel <dt>
+              <dd>
+                Google unveiled their new pixel line to much fanfare but the lack of headphone jack was increadibly dissapointing. Their reasons for doing this were unclear, however this marked the beggining of the end of headphone jacks.
+              <dd>
+
+          </dl>
+          <figure>
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/10/IMG_0276-800x533.jpg" alt="iPhone6 and 7" width="304" height="228">
+              <figcaption>The start of the end.</figcaption>
+          </figure>
+      </div>
 
 
     <section>
-        <div>
-          <h2 id="motivation">Why Reintroduce The Headphone Jack</h2>
-            <p>Below are several reasons why we wanted a headphone jack in our phones(in no particular order)</p>
-            <ul class="lists">
-              <li> We don't like being told what to do </li>
-              <li> Don't you have a pair of headphones that feel like a hug from an old friend that you dont want to use with a dongle?</li>
-              <li> <strong>Donglegate</strong> - <em>nuff said</em></li>
-            </ul>
-        </div>
-      </section>
-      <section>
-        <div class="orphan">
-          <p>We believe that people should be allowed to do whatever they want to their property.</p>
-          <p>Phones are getting more expensive and more complicated, we are here to help you understand what it is you own.</p>
-        </div>
-        <div class="widow">
-          <p>Come on over for friendly customer service.</p>
-          <p>We would also be willing to teach you how to do it yourself!</p>
-        </div>
-      </section>
+      <h2>Inspiration for Jacked Phones</h2>
+        <p>Scotty from <a href='https://www.youtube.com/watch?v=utfbE3_uAMA'> strange parts </a> was our inspiration. Watch this video to see how to do this yourself. <em> <strong> Caution:</strong> its extremely hard to do this yourself so its better to come and have us do it for you.</em></p>
+        <p>It should be noted that these changes do not follow any <abbr title="International Organization for Standardization">ISO</abbr> standards.</p>
+    </section>
 
-      <section>
-        <div class="more">
-          <p>We have more reasons!</p>
-            <ul class="otherthings">
-              <li>headphone jacks are good for poking tiny things - who doesnt need to poke tiny things?!</li>
-              <li>Don't you love coiling up wires?</li>
-          </ul>
-        </div>
-      </section>
+    <section>
+      <h2>Here's what our customers have to say!</h2>
+        <blockquote>
+          <p>&ldquo;They broke my phone, but at least they were nice about it.&ldquo; - Shela</p>
+          <p>&ldquo;My barometer doesnt work, apparently they told me when they explained what they were doing but I wasn't paying attention and now I'm pissed.&ldquo; - Johny</p>
+        </blockquote>
+    </section>
 
-
-        <div class="happened">
-          <h2> What happened? </h2>
-            <dl>
-              <dt>Apple iPhone 7</dt>
-                <dd>
-                  Apple releaed the iPhone 7 and decided that the headphone jack was not needed, they said it was courage but we all know they wanted us to buy their new wireless headphones
-                </dd>
-            </dl>
-              <figure>
-                <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/DSC05289-1-980x653.jpg" alt="Google-Pixel" width="304" height="228">
-                  <figcaption>What's wrong here?</figcaption>
-              </figure>
-              <dl>
-              <dt> Google Pixel <dt>
-                <dd>
-                  Google unveiled their new pixel line to much fanfare but the lack of headphone jack was increadibly dissapointing. Their reasons for doing this were unclear, however this marked the beggining of the end of headphone jacks.
-                <dd>
-
-            </dl>
-            <figure>
-              <img src="https://cdn.arstechnica.net/wp-content/uploads/2017/10/IMG_0276-800x533.jpg" alt="iPhone6 and 7" width="304" height="228">
-                <figcaption>The start of the end.</figcaption>
-            </figure>
+    <section>
+      <div class="footer">
+        <div class="footer_item" id="location">
+          <h2>Our Location</h2>
+          <img class="footer_location_image" alt="Location" src="http://blog.socialitysquared.com/wp-content/uploads/2010/09/iStock_000006260161Small.jpg">
         </div>
 
-
-      <section>
-        <h2>Inspiration for Jacked Phones</h2>
-          <p>Scotty from <a href='https://www.youtube.com/watch?v=utfbE3_uAMA'> strange parts </a> was our inspiration. Watch this video to see how to do this yourself. <em> <strong> Caution:</strong> its extremely hard to do this yourself so its better to come and have us do it for you.</em></p>
-          <p>It should be noted that these changes do not follow any <abbr title="International Organization for Standardization">ISO</abbr> standards.</p>
-      </section>
-
-      <section>
-        <h2>Here's what our customers have to say!</h2>
-          <blockquote>
-            <p>&ldquo;They broke my phone, but at least they were nice about it.&ldquo; - Shela</p>
-            <p>&ldquo;My barometer doesnt work, apparently they told me when they explained what they were doing but I wasn't paying attention and now I'm pissed.&ldquo; - Johny</p>
-          </blockquote>
-      </section>
-
-      <section>
-        <div class="footer">
-          <div class="footer_item" id="location">
-            <h2>Our Location</h2>
-            <img class="footer_location_image" alt="Location" src="http://blog.socialitysquared.com/wp-content/uploads/2010/09/iStock_000006260161Small.jpg">
-          </div>
-
-          <div class= "footer_item" id="hours">
-            <table class="hours">
-              <caption class="hours"> Store Hours </caption>
-                <tr><th>Monday</th><td>10am - 4pm</td></tr>
-                <tr><th>Tuesday</th><td>12am - 5pm</td></tr>
-                <tr><th>Wednesday</th><td>Closed</td></tr>
-                <tr><th>Thursday</th><td>10am - 4pm</td></tr>
-                <tr><th>Friday</th><td>10am - 4pm</td></tr>
-                <tr><th>Saterday</th><td>9am - 5pm</td></tr>
-                <tr><th>Sunday</th><td>Closed</td></tr>
-            </table>
-          </div>
-
-          <div class="footer_item" id="contact">
-            <h2> Contact Us!</h2>
-            <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
-            <fieldset>
-                <label class="name">Name
-                  <input type="text" name="firstname" placeholder="Your name">
-                </label>
-
-                <label class="email">Email adress
-                  <input type="email" name="email_address" placeholder="name@domain.com">
-                </label>
-
-                <label class="question">Your question
-                  <textarea name="subject" placeholder="Your question goes here..."></textarea>
-                </label>
-                <input type="submit" value="Submit">
-              </fieldset>
-            </form>
-          </div>
+        <div class= "footer_item" id="hours">
+          <table class="hours">
+            <caption class="hours"> Store Hours </caption>
+              <tr><th>Monday</th><td>10am - 4pm</td></tr>
+              <tr><th>Tuesday</th><td>12am - 5pm</td></tr>
+              <tr><th>Wednesday</th><td>Closed</td></tr>
+              <tr><th>Thursday</th><td>10am - 4pm</td></tr>
+              <tr><th>Friday</th><td>10am - 4pm</td></tr>
+              <tr><th>Saterday</th><td>9am - 5pm</td></tr>
+              <tr><th>Sunday</th><td>Closed</td></tr>
+          </table>
         </div>
+
+        <div class="footer_item" id="contact">
+          <h2> Contact Us!</h2>
+          <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
+          <fieldset>
+              <label class="name">Name
+                <input type="text" name="firstname" placeholder="Your name">
+              </label>
+
+              <label class="email">Email adress
+                <input type="email" name="email_address" placeholder="name@domain.com">
+              </label>
+
+              <label class="question">Your question
+                <textarea name="subject" placeholder="Your question goes here..."></textarea>
+              </label>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </section>
     <div>
-      <h2> Browser Compatability Report</h2>
-        <p class="browser">
-          In order to learn html and css we followed the internetingishard.com tutorial. This was very easy to follow and was primarily done by only sticking to examples which are applicable to firefox. The site looks pretty much identical on all the different browsers (safari, chrome, firefox) except for the store hours box. This is probably becuase the website is increadibly simple and we intentionally avoided doing complex nestings of elements. There are also no errors (only warnings) from the validator. This store hours box appears to be a nudged slightly lower on safari and chrome than it does on firefox. This could be alleviated by increaseing the size of the footer_item with a higher height percentage. Another option would be to change the margins on the table.hours css element to make it fit better inside. Apart from that, the rules that interpret the very simple html we wrote must be the implemented in the same manner across the different browers. With increasibly more complex elements or nesting or elements the rules are probably interpreted differently and thus compatability issues arise. This must be the case for sliders or highly interactive javascript content.
-        </p>
+    <h2> Browser Compatability Report</h2>
+      <p class="browser">
+        In order to learn html and css we followed the internetingishard.com tutorial. This was very easy to follow and was primarily done by only sticking to examples which are applicable to firefox. The site looks pretty much identical on all the different browsers (safari, chrome, firefox) except for the store hours box. This is probably becuase the website is increadibly simple and we intentionally avoided doing complex nestings of elements. There are also no errors (only warnings) from the validator. This store hours box appears to be a nudged slightly lower on safari and chrome than it does on firefox. This could be alleviated by increaseing the size of the footer_item with a higher height percentage. Another option would be to change the margins on the table.hours css element to make it fit better inside. Apart from that, the rules that interpret the very simple html we wrote must be the implemented in the same manner across the different browers. With increasibly more complex elements or nesting or elements the rules are probably interpreted differently and thus compatability issues arise. This must be the case for sliders or highly interactive javascript content.
+      </p>
 
     </div>
   </body>
