@@ -27,9 +27,31 @@ $(document).ready(function()
         }
     });
 });
-$(document).ready(function(){
-    $("#submit").click(function(event){
-      event.preventDefault();
+
+
+
+/*
+$('a').click(function () {
+    // custom handling here
+    return false;
+});
+*/
+$("#submit").submit(function(e){
+    return false;
+    $.ajax({
+    url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+    type: "POST",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    complete: callback
+    });
+});
+
+/*
+    $('#submit').click(function(e){
+      return false;
+
+
 
       $.ajax({
       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
@@ -49,8 +71,8 @@ $(document).ready(function(){
         }});
         */
 
-    });
-});
+  //  });
+
 //this was sourced from stackoverflow https://stackoverflow.com/questions/31074532/using-jquery-to-build-table-rows-from-ajax-response-not-with-static-json-data
 
 
