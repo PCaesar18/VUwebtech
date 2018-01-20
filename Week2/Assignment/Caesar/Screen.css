@@ -103,10 +103,10 @@ h1 {
 }
 
 table {
-  float:right;
   background-color: grey;
   caption-side: top;
   border: 3px solid black;
+  width: 100%;
 }
 
 caption {
@@ -129,7 +129,7 @@ td {
   border: 1px solid black;
   text-align: center;
   width: 20%;
-  height: auto;
+  height: 50px;
 }
 
 .models {
