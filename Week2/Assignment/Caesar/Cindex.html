@@ -7,6 +7,9 @@
      <link rel="stylesheet" type="text/css" href="Screen.css">
      <meta charset="UTF-8">
      <link rel="stylesheet" type="text/css" href="Print.css">
+     <script type="text/javascript"></script>
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+     </script>
   </head>
   <body>
     <div class="bannerimage">
@@ -33,36 +36,27 @@
       </tr>
       <tr>
         <td>
-          <figure>
-            <img class="models" src="https://www.tech4d.it/wp-content/uploads/2017/03/google-pixel-2-leaked-front.jpg" alt="Google Pixel 2">
-          </figure>
         </td>
-        <td>Google</td>
-        <td><a href="https://en.wikipedia.org/wiki/Pixel_2">Pixel 2</a></td>
-        <td>6-inch</td>
-        <td>Android</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>
-          <figure>
-            <img class="models" src="https://cdn.arstechnica.net/wp-content/uploads/2016/09/iphone7-intro-800x533.jpg" alt="iPhone 7 Plus">
-          </figure>
         </td>
-        <td>Apple</td>
-        <td><a href="https://en.wikipedia.org/wiki/IPhone_7">iPhone 7 Plus</a></td>
-        <td>5.5-inch</td>
-        <td>iOS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>
-          <figure>
-            <img class="models" src="https://uncrate.com/p/2017/03/samsung-galaxy-s8.jpg" alt="Samsung Galaxy S8">
-          </figure>
         </td>
-        <td>Samsung</td>
-        <td><a href="https://en.wikipedia.org/wiki/Samsung_Galaxy_S8">Galaxy S8</a></td>
-        <td>5.8-inch</td>
-        <td>Android</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
     </table>
     <div>
@@ -115,26 +109,41 @@
           <tr>
             <td>
               <div class='form-row'>
-              <button>Submit</button>
+              <button id="submit">Submit</button>
               </div>
+              <script>
+              $(document).ready(function(){
+                  $("#submit").click(function(){
+                    $.ajax({
+                      type: 'GET',
+                      url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+                      dataType: 'json',
+                      succes  : function(data){
+                        alert("You succesfully submitted data");
+                        $("#testresult").html(data);
+                      }});
+                  });
+              });
+              </script>
             </td>
             <td>
               <div class='form-row'>
                 <button id = "reset">Reset</button>
               </div>
               <!--Jquery request -->
-               <script type="text/javascript"></script>
-                 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
                 <script>
                 $(document).ready(function(){
                     $("#reset").click(function(){
-                        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe", function(data, status){
-                            alert("Data: " + data + "\nStatus: " + status);
+                        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
+                            alert("Your database is reset!");
                         });
                     });
                 });
                 </script>
-
+            </td>
+            <td>
+              <div id="testresult">
+                <div>
             </td>
           </tr>
         </table>
