@@ -47,7 +47,7 @@ $(document).ready(function()
 });
 
 $(document).ready(function(){
-    $("#reset").click(function(event){
+    $("#reset").onclick(function(event){
       event.preventDefault(); //this prevents the submit button to redirect us to the database page
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
             alert("Your database is reset!"); //a small alert to warn the user that the database is reset
