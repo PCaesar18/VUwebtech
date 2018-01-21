@@ -1,5 +1,18 @@
-/*First we submit some data in the form*/
-
+/*First we submit some data in the form
+var form = $('#submitform');
+form.submit(function(e){
+  e.preventDefault();
+  $.ajax({
+  url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+  type: "POST",
+  data: form.serialize(),
+  contentType: "application/json",
+  complete: callback
+  });
+});
+});
+*/
+//appearently we need the bottom of this for the table to even render
 $("#submit").submit(function(e){
     return false;
     $.ajax({
