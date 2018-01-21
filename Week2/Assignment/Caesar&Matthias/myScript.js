@@ -1,28 +1,10 @@
-/*First we submit some data in the form
-var form = $('#submitform');
-form.submit(function(e){
-  e.preventDefault();
-  $.ajax({
-  url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-  type: "POST",
-  data: form.serialize(),
-  contentType: "application/json",
-  complete: callback
-  });
-});
-});
-*/
-//appearently we need the bottom of this for the table to even render
-
-/*this should enable us for the response to be handled correctly*/
 //this loads html content from the VU into the table
-//the webpage only updates upon releading because only then the .ready function is called
 $(document).ready(function()
 {
     $.ajax({
       //ajax request with paramaters to get a json file from the VU
         url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
-        type: 'GET',
+        type: 'get',
         dataType:'json',
         success: function (response)
         //if succesful do the following
@@ -46,18 +28,89 @@ $(document).ready(function()
     });
 });
 
-$(document).ready(function(){
-    $("#reset").onclick(function(event){
-      event.preventDefault(); //this prevents the submit button to redirect us to the database page
-        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
-            alert("Your database is reset!"); //a small alert to warn the user that the database is reset
-        });
+
+$(document).ready(function()
+{
+    $.ajax({
+      //ajax request with paramaters to get a json file from the VU
+        url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
+        type: 'get',
+        dataType:'json',
+        success: function (response)
+        //if succesful do the following
+        {
+          var trHTML = '';
+          //set up an empty var
+          $.each(response, function (key,value) {
+            //for each object in the json file look at the key and the value pair
+             trHTML +=
+             //concatenate the key value pairs that were passed with the correct html tag
+               '<tr><td>' + value.brand +
+               '</td><td>' + value.model +
+               '</td><td>' + value.os +
+               '</td><td><img src="' + value.image +
+               '"></td><td>' + value.screensize +
+               '</td></tr>';
+          });
+            $('#myTable').append(trHTML);
+            //append to table named myTable the string trHTML
+        }
     });
 });
 
 
-$("#submit").submit(function(e){
+
+/*
+$(document).ready(function() {
+        var form = $("#myForm");
+
+        $("#myform").submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+            url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+            type: "POST",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            complete: callback
+            });
+        })
+    })
+
+
+
+/*
+$('a').click(function () {
+    // custom handling here
     return false;
+});
+
+$('submit').submit(function(event) {$.ajax({
+url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+type: "POST",
+data: JSON.stringify(data),
+contentType: "application/json",
+complete: callback
+});
+})
+
+
+$(document).ready(function() {
+  $("#submit").click(function(event){
+      event.preventDefault();
+      $.ajax({
+      url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+      type: "POST",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      complete: callback
+      });
+  });
+});
+
+
+/*
+$("#submit").on('click', function(e){
+    e.preventDefault();
     $.ajax({
     url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
     type: "POST",
@@ -68,16 +121,6 @@ $("#submit").submit(function(e){
 });
 
 /*
-$('a').click(function () {
-    // custom handling here
-    return false;
-});
-*/
-
-//reset function
-
-
-/*
     $('#submit').click(function(e){
       return false;
 
@@ -86,7 +129,7 @@ $('a').click(function () {
       $.ajax({
       url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
       type: "POST",
-      data: JSON.serialize(data),
+      data: JSON.stringify(data),
       contentType: "application/json",
       complete: callback
       });
@@ -161,3 +204,14 @@ function sortTable(n) {
     }
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
+
+//reset function
+
+$(document).ready(function(){
+    $("#reset").click(function(event){
+      event.preventDefault(); //this prevents the submit button to redirect us to the database page
+        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
+            alert("Your database is reset!"); //a small alert to warn the user that the database is reset
+        });
+    });
+});
