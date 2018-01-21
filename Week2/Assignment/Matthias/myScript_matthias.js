@@ -7,27 +7,75 @@ $(document).ready(function()
         type: 'get',
         dataType:'json',
         success: function (response)
-        //if succesful do the following
         {
           var trHTML = '';
-          //set up an empty var
           $.each(response, function (key,value) {
-            //for each object in the json file look at the key and the value pair
              trHTML +=
-             //concatenate the key value pairs that were passed with the correct html tag
-               '<tr><td>' + value.brand +
-               '</td><td>' + value.model +
-               '</td><td>' + value.os +
-               '</td><td><img src="' + value.image +
-               '"></td><td>' + value.screensize +
-               '</td></tr>';
+             '<tr><td>' + value.brand +
+             '</td><td>' + value.model +
+             '</td><td>' + value.os +
+             '</td><td><img src="' + value.image +
+             '"></td><td>' + value.screensize +
+             '</td></tr>';
           });
+
             $('#myTable').append(trHTML);
-            //append to table named myTable the string trHTML
         }
+
+    });
+
+
+    $('form').submit(function(event) { //Trigger on form submit
+      $('#name + .throw_error').empty(); //Clear the messages first
+      $('#success').empty();
+
+
+        //Validate fields if required using jQuery
+
+
+        var postForm = $('form').serialize();
+
+        $.ajax({ //Process the form using $.ajax()
+            type      : 'POST', //Method type
+            url       : 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
+            //Your form processing file URL
+            data      : postForm, //Forms name
+            dataType:"json",
+            success: function (response)
+            {
+              $.get(response.URI, function(value){
+                var trHTML = '';
+
+                   trHTML +=
+                   '<tr><td>' + value.brand +
+                   '</td><td>' + value.model +
+                   '</td><td>' + value.os +
+                   '</td><td><img src="' + value.image +
+                   '"></td><td>' + value.screensize +
+                   '</td></tr>';
+
+
+                  $('#myTable').append(trHTML);
+              })
+
+            }
+
+
+        });
+
+        event.preventDefault(); //Prevent the default submit
+    });
+
+    $("#reset").click(function(){
+        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
+            alert("Your database is reset!");
+        });
     });
 });
 //this was sourced from stackoverflow https://stackoverflow.com/questions/31074532/using-jquery-to-build-table-rows-from-ajax-response-not-with-static-json-data
+
+
+
 
 
 
@@ -86,26 +134,7 @@ function sortTable(n) {
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
 
+
+
+
 //reset function
-$(document).ready(function(){
-    $("#submit").click(function(){
-      $.ajax({
-        type: 'post',
-        url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-        dataType: 'json',
-        succes  : function(data){
-          alert("You succesfully submitted data");
-          $("#testresult").html(data);
-        }});
-
-
-    });
-});
-
-$(document).ready(function(){
-    $("#reset").click(function(){
-        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
-            alert("Your database is reset!");
-        });
-    });
-});

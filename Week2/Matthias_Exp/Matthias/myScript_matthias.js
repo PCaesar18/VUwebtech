@@ -89,22 +89,17 @@ function sortTable(n) {
 
 
 
-document.getElementById("submit").addEventListener("click", function(event)
+
+
+
+$(document).ready(function()
 {
-    event.preventDefault()
-});
-
-/*
-$(document).ready(function(){
-    $('#submit').on('click', function(){
-
-      $.post("https://wt.ops.labs.vu.nl/api18/f47cbdfe"[, JSON.stringify(data)])
-
-    }
+  $('#reset').click(function(){
+    $.post("https://wt.ops.labs.vu.nl/api18/f47cbdfe", JSON.stringify(data))}
   );
 });
 
-*/
+
 
 
 

@@ -29,15 +29,88 @@ $(document).ready(function()
 });
 
 
+$(document).ready(function()
+{
+    $.ajax({
+      //ajax request with paramaters to get a json file from the VU
+        url: 'https://wt.ops.labs.vu.nl/api18/f47cbdfe',
+        type: 'get',
+        dataType:'json',
+        success: function (response)
+        //if succesful do the following
+        {
+          var trHTML = '';
+          //set up an empty var
+          $.each(response, function (key,value) {
+            //for each object in the json file look at the key and the value pair
+             trHTML +=
+             //concatenate the key value pairs that were passed with the correct html tag
+               '<tr><td>' + value.brand +
+               '</td><td>' + value.model +
+               '</td><td>' + value.os +
+               '</td><td><img src="' + value.image +
+               '"></td><td>' + value.screensize +
+               '</td></tr>';
+          });
+            $('#myTable').append(trHTML);
+            //append to table named myTable the string trHTML
+        }
+    });
+});
+
+
+
+/*
+$(document).ready(function() {
+        var form = $("#myForm");
+
+        $("#myform").submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+            url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+            type: "POST",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            complete: callback
+            });
+        })
+    })
+
+
 
 /*
 $('a').click(function () {
     // custom handling here
     return false;
 });
-*/
-$("#submit").submit(function(e){
-    return false;
+
+$('submit').submit(function(event) {$.ajax({
+url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+type: "POST",
+data: JSON.stringify(data),
+contentType: "application/json",
+complete: callback
+});
+})
+
+
+$(document).ready(function() {
+  $("#submit").click(function(event){
+      event.preventDefault();
+      $.ajax({
+      url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+      type: "POST",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      complete: callback
+      });
+  });
+});
+
+
+/*
+$("#submit").on('click', function(e){
+    e.preventDefault();
     $.ajax({
     url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
     type: "POST",

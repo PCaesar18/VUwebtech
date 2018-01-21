@@ -27,20 +27,16 @@
         <a href="#models">Available models</a>
       </nav>
     </div>
-      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="get">
+      <form>
         <table id="myTable">
           <thead>
             <tfoot>
               <div class='form-row'>
-                <button id = "reset">
+                <button id="reset">
                   Reset
                 </button>
               </div>
-              <div class='form-row'>
-                <button id="submit">
-                  Submit
-                </button>
-              </div>
+            <input type="submit" value="Send" />
             </tfoot>
             <tr>
               <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
@@ -64,35 +60,36 @@
           <tbody>
             <tr>
               <td>
-                <div class='form-row'>
-                  <label for='brand'></label>
+
+
                   <input id='brand' name='brand' type='text'/>
-                </div>
+
               </td>
               <td>
-                <div class='form-row'>
-                  <label for='model'></label>
+
+
                   <input id='model' name='model' type='text'/>
-                </div>
+
               </td>
               <td>
-                <div class='form-row'>
-                  <label for='os'></label>
+
+
                   <input id='os' name='os' type='text'/>
-                </div>
+
               </td>
               <td>
-                <div class='form-row'>
-                  <label for='image'></label>
+
+
                   <input id='image' name='image' type='text'/>
-                </div>
+
               </td>
               <td>
-                <div class='form-row'>
-                  <label for='screensize'></label>
+
+
                   <input id='screensize' name='screensize' type='text'/>
-                </div>
+
               </td>
+
             </tr>
           </tbody>
         </table>
@@ -192,22 +189,7 @@
 
         <div class="footer_item" id="contact">
           <h2> Contact Us!</h2>
-          <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
-          <fieldset>
-              <label class="name">Name
-                <input type="text" name="firstname" placeholder="Your name">
-              </label>
 
-              <label class="email">Email adress
-                <input type="email" name="email_address" placeholder="name@domain.com">
-              </label>
-
-              <label class="question">Your question
-                <textarea name="subject" placeholder="Your question goes here..."></textarea>
-              </label>
-              <input type="submit" value="Submit">
-            </fieldset>
-          </form>
         </div>
       </div>
     </section>
