@@ -27,75 +27,37 @@
         <a href="#models">Available models</a>
       </nav>
     </div>
-      <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+    <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+      <div class="form-row">
         <input type="reset" value="Reset" id="reset"/>
         <input type="submit" value="Send" />
-        <table id="myTable">
-          <thead>
-            <tfoot>
+      </div>
 
+      <table id="myTable">
+        <thead>
+          <tr>
+          <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+            <th align="center" width="100" onclick="sortTable(1)">Brand</th>
+            <th align="center" width="100" onclick="sortTable(1)">Model</th>
+            <th align="center" width="100" onclick="sortTable(1)">OS</th>
+            <th align="center" width="100" onclick="sortTable(0)">Image</th>
+            <th align="center" width="100" onclick="sortTable(0)">Screen Size</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr >
+            <td><input id='brand' name='brand' type='text'/></td>
+            <td><input id='model' name='model' type='text'/></td>
+            <td><input id='os' name='os' type='text'/></td>
+            <td><input id='image' name='image' type='text'/></td>
+            <td><input id='screensize' name='screensize' type='text'/></td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
 
-
-
-
-
-            </tfoot>
-            <tr>
-              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-              <th align="center" width="50" onclick="sortTable(0)">
-                Brand
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                Model
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                OS
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                Image
-              </th>
-              <th align="center" width="150" onclick="sortTable(0)">
-                Screen Size
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-
-
-                  <input id='brand' name='brand' type='text'/>
-
-              </td>
-              <td>
-
-
-                  <input id='model' name='model' type='text'/>
-
-              </td>
-              <td>
-
-
-                  <input id='os' name='os' type='text'/>
-
-              </td>
-              <td>
-
-
-                  <input id='image' name='image' type='text'/>
-
-              </td>
-              <td>
-
-
-                  <input id='screensize' name='screensize' type='text'/>
-
-              </td>
-
-            </tr>
-          </tbody>
-        </table>
-      </form>
     <section>
       <div>
         <h2 id="motivation">Why Reintroduce The Headphone Jack</h2>

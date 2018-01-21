@@ -266,6 +266,7 @@ input[type=submit]{
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
+
 }
 input[type=submit]:hover {
   background-color: purple;
@@ -278,6 +279,7 @@ input[type=reset]{
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
+  
 }
 input[type=reset]:hover {
   background-color: purple;

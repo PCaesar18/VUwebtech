@@ -1,4 +1,4 @@
-//this loads html content from the VU into the table
+//this loads html content from the VU into the table onload, send, reset
 $(document).ready(function()
 {
     $.ajax({
@@ -21,18 +21,9 @@ $(document).ready(function()
 
             $('#myTable').append(trHTML);
         }
-
     });
-
-
     $('form').submit(function(event) { //Trigger on form submit
-      //$('#name + .throw_error').empty(); //Clear the messages first
-      //$('#success').empty();
-
-
         //Validate fields if required using jQuery
-
-
         var postForm = $('form').serialize();
 
         $.ajax({ //Process the form using $.ajax()
@@ -45,7 +36,6 @@ $(document).ready(function()
             {
               $.get(response.URI, function(value){
                 var trHTML = '';
-
                    trHTML +=
                    '<tr><td>' + value.brand +
                    '</td><td>' + value.model +
@@ -53,36 +43,25 @@ $(document).ready(function()
                    '</td><td><img src="' + value.image +
                    '"></td><td>' + value.screensize +
                    '</td></tr>';
-
-
                   $('#myTable').append(trHTML);
               })
-
             }
-
-
         });
-
         event.preventDefault(); //Prevent the default submit
     });
-
     $("#reset").click(function(){
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(response){
 
 
               alert("Your database is reset!");
-          
+
 
         });
     });
 });
 //this was sourced from stackoverflow https://stackoverflow.com/questions/31074532/using-jquery-to-build-table-rows-from-ajax-response-not-with-static-json-data
 
-
-
-
-
-
+//Sorting
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
@@ -137,8 +116,3 @@ function sortTable(n) {
     }
   }
 }//this code was sourced from https://www.w3schools.com/howto/howto_js_sort_table.asp
-
-
-
-
-//reset function
