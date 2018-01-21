@@ -26,8 +26,8 @@ $(document).ready(function()
 
 
     $('form').submit(function(event) { //Trigger on form submit
-      $('#name + .throw_error').empty(); //Clear the messages first
-      $('#success').empty();
+      //$('#name + .throw_error').empty(); //Clear the messages first
+      //$('#success').empty();
 
 
         //Validate fields if required using jQuery
@@ -67,8 +67,12 @@ $(document).ready(function()
     });
 
     $("#reset").click(function(){
-        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
-            alert("Your database is reset!");
+        $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(response){
+
+
+              alert("Your database is reset!");
+          
+
         });
     });
 });
