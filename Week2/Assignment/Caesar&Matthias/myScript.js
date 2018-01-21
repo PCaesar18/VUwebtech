@@ -13,18 +13,10 @@ form.submit(function(e){
 });
 */
 //appearently we need the bottom of this for the table to even render
-$("#submit").submit(function(e){
-    return false;
-    $.ajax({
-    url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
-    type: "POST",
-    data: JSON.stringify(data),
-    contentType: "application/json",
-    complete: callback
-    });
-});
+
 /*this should enable us for the response to be handled correctly*/
 //this loads html content from the VU into the table
+//the webpage only updates upon releading because only then the .ready function is called
 $(document).ready(function()
 {
     $.ajax({
@@ -60,6 +52,18 @@ $(document).ready(function(){
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(){
             alert("Your database is reset!"); //a small alert to warn the user that the database is reset
         });
+    });
+});
+
+
+$("#submit").submit(function(e){
+    return false;
+    $.ajax({
+    url: "https://wt.ops.labs.vu.nl/api18/f47cbdfe",
+    type: "POST",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    complete: callback
     });
 });
 
