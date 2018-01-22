@@ -7,8 +7,8 @@
     </title>
     <link rel="stylesheet" type="text/css" href="Screen.css">
       <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="newScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- jquery library -->
+    <script src="myScript.js"></script>
 
   </head>
   <body>
@@ -27,77 +27,36 @@
         <a href="#models">Available models</a>
       </nav>
     </div>
-    <div id="result"></div>
-      <form name="myForm">
-        <table id ="myTable">
-          <thead>
-            <tfoot>
-              <div class='reset-form-row'>
-                <button id="reset">
-                  Reset
-                </button>
-              </div>
-              <div class='submit-form-row'>
-                <button id="submit">
-                  Submit
-                </button>
-              </div>
-            </tfoot>
-            <tr>
-              <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
-              <th align="center" width="50" onclick="sortTable(0)">
-                Brand
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                Model
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                OS
-              </th>
-              <th align="center" width="100" onclick="sortTable(0)">
-                Image
-              </th>
-              <th align="center" width="150" onclick="sortTable(0)">
-                Screen Size
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
+    <form action="https://wt.ops.labs.vu.nl/api18/f47cbdfe" method="post">
+      <div class="form-row">
+        <input type="reset" value="Reset" id="reset"/>
+        <input type="submit" value="Submit" />
+      </div>
 
-                  <label for='brand'></label>
-                  <input id='brand' name='brand' type='text'/>
-
-              </td>
-              <td>
-
-                  <label for='model'></label>
-                  <input id='model' name='model' type='text'/>
-
-              </td>
-              <td>
-
-                  <label for='os'></label>
-                  <input id='os' name='os' type='text'/>
-
-              </td>
-              <td>
-
-                  <label for='image'></label>
-                  <input id='image' name='image' type='text'/>
-
-              </td>
-              <td>
-
-                  <label for='screensize'></label>
-                  <input id='screensize' name='screensize' type='text'/>
-
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
+      <table id="myTable">
+        <thead>
+          <tr>
+          <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+            <th align="center" width="100" onclick="sortTable(1)">Brand</th>
+            <th align="center" width="100" onclick="sortTable(1)">Model</th>
+            <th align="center" width="100" onclick="sortTable(1)">OS</th>
+            <th align="center" width="100" onclick="sortTable(0)">Image</th>
+            <th align="center" width="100" onclick="sortTable(0)">Screen Size</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr >
+            <td><input id='brand' name='brand' type='text'/></td>
+            <td><input id='model' name='model' type='text'/></td>
+            <td><input id='os' name='os' type='text'/></td>
+            <td><input id='image' name='image' type='text'/></td>
+            <td><input id='screensize' name='screensize' type='text'/></td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
 
     <section>
       <div>
@@ -194,22 +153,7 @@
 
         <div class="footer_item" id="contact">
           <h2> Contact Us!</h2>
-          <form action="https://wt.ops.labs.vu.nl/api18/8ef93e95" method="post">
-          <fieldset>
-              <label class="name">Name
-                <input type="text" name="firstname" placeholder="Your name">
-              </label>
 
-              <label class="email">Email adress
-                <input type="email" name="email_address" placeholder="name@domain.com">
-              </label>
-
-              <label class="question">Your question
-                <textarea name="subject" placeholder="Your question goes here..."></textarea>
-              </label>
-              <input type="submit" value="Submit">
-            </fieldset>
-          </form>
         </div>
       </div>
     </section>

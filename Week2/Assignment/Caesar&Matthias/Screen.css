@@ -102,8 +102,6 @@ h1 {
   border: 1px solid black;
 }
 
-
-
 caption {
   font-weight: bold;
   font-size: 3em;
@@ -261,18 +259,32 @@ input,textarea {
 }
 input[type=submit]{
   background-color: #00ACE9;
-  width: 20%;
+  width: 10%;
   float:left;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
+
 }
 input[type=submit]:hover {
   background-color: purple;
 }
 
+input[type=reset]{
+  background-color: #00ACE9;
+  width: 10%;
+  float:left;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+
+}
+input[type=reset]:hover {
+  background-color: purple;
+}
+
 .form-row button {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #5995DA;
@@ -304,21 +316,28 @@ p.browser {
 
 
 
-  table {
-    border-spacing: 0;
+#myTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
     width: 100%;
-    border: 1px solid #ddd;
-  }
+    text-align: center;
+}
 
-  th {
-    cursor: pointer;
-  }
+#myTable td, #myTable th {
+    border: 2px solid black;
+    padding: 8px;
+}
 
-  th, td {
+#myTable tr:hover {background-color: #ddd;
+color: black;
+border-color: black;}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-align: left;
-    padding: 16px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2
-  }
+    background-color: #D43F3F;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+}
