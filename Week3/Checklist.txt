@@ -1,0 +1,71 @@
+Assignment "A RESTful HTTP API"
+
+Hints and Tips
+
+By now, you should have realised that the API you need to make for this assignment is very similar to the API available at http://wt.ops.few.vu.nl/api18/, the API we asked you to use for Assignment 1 and 2.
+
+You may indeed use it as inspiration, but copying its behavior literally is not recommended, as it may not strictly conform to the requirements of this assignment!
+
+Some functions are missing or could be improved upon, or they could be simplified.
+
+For example, you may simple assume a single user and do not need to document or implement the key-based interface we used for http://wt.ops.few.vu.nl/api18/.
+
+You may use good examples of other APIs found on the Web for inspiration.
+
+Note that this applies both to examples of good code and to examples of good documentation (see also Lab 5, question 5)!
+
+In your documentation, you may assume your audience already understands the JSON data format and how RESTful APIs work.
+
+Just document how your API should be used, and what responses it will give.
+
+Do not forget to include the (localhost) URLs on which the services of your API are available (these URLs are often referred to as "endpoints").
+
+Tip: most developers prefer short, insightful examples over long descriptive texts!
+
+To test your REST server, you should know how to use a REST client (see also Lab 5, question 6).
+
+This assignment requires some programming in Python, but programming is not an explicit learning goal.
+
+To minimize the time you spend on coding, we provide example code on Canvas. You may literally use all code provided (with or without changing it as you like).
+
+You may use or modify our example SQL queries.
+
+For a real-world application, access to non-safe methods should of course be protected to prevent non-authorized modifications to your database.
+
+Such protection is, however, not required for the purpose of this assignment.
+
+
+
+Learning goals
+
+The purpose of the assignment is to learn the key principles underlying REST on the server-side of the Web.
+
+In addition, the assignment makes you familiar with the notion of a Web service that provides a data-oriented interface, in contrast to the more well-known Web sites that provide document-oriented interfaces.
+
+You will gain experience with working in the context of an existing (micro) web-server framework, and learn how to deal with typical server-side design and development issues.
+
+These issues tend to be different from the client-side aspects explored in the previous assignments.
+
+They are also less visible to Web-users, but are key to fully understand the Web's client/server architecture.
+
+After making the assignment the student should:
+
+understand how a simple HTTP API functions;
+understand typical server-side concepts, such as a (information) resource being served in an exchange format (JSON) that is independent from its storage representation (in a SQL backend)
+stateless, safe and idempotent operations on data over the Web;
+
+understand how this data-oriented interface can and should be realised without the use of any HTML, CSS or JavaScript;
+
+be able to design and adequately document such a Web service (analogous to simple documentation examples of such services found on the Web)
+
+be able to implement such a Web service (using the Python programming language and a simple web framework);
+
+be able to read fragments of server-side code as used in the example and explain the intended behavior;
+
+be able to find and solve simple errors made in server-side code;
+
+Students are not required to learn syntactical details of HTTP, Python or Bottle by heart, but should be able to look these up in appropriate documentation found online.
+
+The reuse of small code examples found in online tutorials is allowed, as long as students fully understand the copied code, and are able to document the behaviour of the code in their own words.
+
+For the final exam, students need to be able to read, understand and explain fragments of provided code, where the code will be at a level of complexity similar to the complexity of the code in this particular assignment.
