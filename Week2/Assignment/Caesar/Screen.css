@@ -102,12 +102,7 @@ h1 {
   border: 1px solid black;
 }
 
-table {
-  background-color: grey;
-  caption-side: top;
-  border: 3px solid black;
-  width: 100%;
-}
+
 
 caption {
   font-weight: bold;
@@ -116,21 +111,6 @@ caption {
   caption-side: top;
 }
 
-tr {
-  height: 30px;
-}
-
-th {
-  background-color: #D43F3F;
-  text-align: center;
-}
-
-td {
-  border: 1px solid black;
-  text-align: center;
-  width: 20%;
-  height: 50px;
-}
 
 .models {
   width: 100%;
@@ -293,15 +273,13 @@ input[type=submit]:hover {
 
 .form-row button {
   font-size: 16px;
-  border: solid black;
-  border-width: 2px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #5995DA;
+  border: none;
   border-radius: 3px;
   padding: 10px 40px;
   cursor: pointer;
-
 }
 
 .form-row button:hover {
@@ -311,11 +289,36 @@ input[type=submit]:hover {
 .form-row button:active {
   background-color: #407FC7;
 }
+.form-row input:focus {
+  background-color: yellow;
+}
 
 img.explination {
   vertical-align: top;
 }
 p.browser {
+  text-indent: 3mm;
   text-indent: 5mm;
   text-transform: initial;
 }
+
+
+
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    cursor: pointer;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2
+  }

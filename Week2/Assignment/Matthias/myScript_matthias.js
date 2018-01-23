@@ -53,7 +53,7 @@ $(document).ready(function()
         $.get("https://wt.ops.labs.vu.nl/api18/f47cbdfe/reset", function(response){
 
 
-              alert("Your database is reset!");
+              alert("Your database is reset! Please reload the page");
 
 
         });

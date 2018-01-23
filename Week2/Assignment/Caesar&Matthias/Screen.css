@@ -102,8 +102,6 @@ h1 {
   border: 1px solid black;
 }
 
-
-
 caption {
   font-weight: bold;
   font-size: 3em;
@@ -261,18 +259,32 @@ input,textarea {
 }
 input[type=submit]{
   background-color: #00ACE9;
-  width: 20%;
+  width: 10%;
   float:left;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 20px;
+
 }
 input[type=submit]:hover {
   background-color: purple;
 }
 
+input[type=reset]{
+  background-color: #00ACE9;
+  width: 10%;
+  float:left;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+
+}
+input[type=reset]:hover {
+  background-color: purple;
+}
+
 .form-row button {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   color: #FFFFFF;
   background-color: #5995DA;
@@ -310,6 +322,7 @@ table {
   width: 100%;
 }
 
+<<<<<<< HEAD
 caption {
   font-weight: bold;
   font-size: 3em;
@@ -332,4 +345,30 @@ td {
   text-align: center;
   width: 20%;
   height: 50px;
+=======
+#myTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+#myTable td, #myTable th {
+    border: 2px solid black;
+    padding: 8px;
+}
+
+#myTable tr:hover {background-color: #ddd;
+color: black;
+border-color: black;}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #D43F3F;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+>>>>>>> e08ddc5574050de36238a02bff5791daa6b539d7
 }

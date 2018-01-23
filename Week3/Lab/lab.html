@@ -362,5 +362,42 @@
         </p>
       </li>
     </ol>
+    <h2>
+      Lab session 5: HTTP & Rest
+    </h2>
+    <ol>
+      <li>
+        <ol>
+          <li>
+            <p>
+              In this context what Knupp is refering to is that the GET request would make the page load exactly the same for every visitor and also upon reloading the page. Furthermore, there would  be no other side effects that result from the information request therefore labeling the GET request as safe.
+            </p>
+          </li>
+          <li>
+            <p>
+              Since both client and server do not know how the other generates content, and nor are they aware of any proxies and caches, they always conform to a standard way of communicating. Because this communication is standardized, it is easy to create intermediate proxies because they can just follow the set standard. This is equal (idempotent) for both every client and server side of the communication.
+            </p>
+          </li>
+          <li>
+            <p>
+              Visitor counts break this assumption because it keeps track of visitors and the count increases every time by 1. Therefore user 101 gets a different counter and therefore different webpage than user 102. This breaks the rule of idempotence, the fact that an 'HTTP response <em>should not</em> depend on previous request'.
+            </p>
+          </li>
+          <li>
+            <p>
+              Since user counting is often done by counting the number of unique IP addresses, proxies cause an issue with this counting. This is because proxy IP addresses can be shared by multiple users which messes up the user counter.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+        </p>
+      </li>
+      <li>
+        <p>
+        </p>
+      </li>
+    </ol>
   </body>
 </html>
