@@ -315,7 +315,37 @@ p.browser {
 }
 
 
+table {
+  background-color: grey;
+  caption-side: top;
+  border: 3px solid black;
+  width: 100%;
+}
 
+<<<<<<< HEAD
+caption {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  caption-side: top;
+}
+
+tr {
+  height: 30px;
+}
+
+th {
+  background-color: #D43F3F;
+  text-align: center;
+  cursor: pointer;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  width: 20%;
+  height: 50px;
+=======
 #myTable {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -340,4 +370,5 @@ border-color: black;}
     color: black;
     cursor: pointer;
     text-align: center;
+>>>>>>> e08ddc5574050de36238a02bff5791daa6b539d7
 }
