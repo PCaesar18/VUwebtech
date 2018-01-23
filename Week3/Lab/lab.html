@@ -373,10 +373,30 @@
               In this context what Knupp is refering to is that the GET request would make the page load exactly the same for every visitor and also upon reloading the page. Furthermore, there would  be no other side effects that result from the information request therefore labeling the GET request as safe.
             </p>
           </li>
+          <li> <p>A stateless protocol is a protocol whose current state does not rely on its previous state. So if you were to look into the state or its current set of conditons you would not need to know (or could not know in some cases) what the previous set of conditions were. This occurs in HTTP becuase neither the sender or receiver are storing any information about each other (or at least they dont have to in order to interact for the first time). One advatange of stateless protocols is that you do not need to make assumptions about the current state of the system before you interact with it. One disadvantage is that it makes it hard to program and adding new features can break the privacy of the users that interact (cookies)</p> </li>
           <li>
             <p>
               Since both client and server do not know how the other generates content, and nor are they aware of any proxies and caches, they always conform to a standard way of communicating. Because this communication is standardized, it is easy to create intermediate proxies because they can just follow the set standard. This is equal (idempotent) for both every client and server side of the communication.
             </p>
+          </li>
+          <li><table>
+            <thead>
+              <td>REST Principles</td> <td>Endpoint</td><td>HTTP Method</td><td>Response</td>
+            </thead>
+            <tr>
+              <td>Spotify</td> <td>https://api.spotify.com/v1/albums/{id}</td><td>GET </td><td>On success, the HTTP status code in the response header is 200 OK and the response body contains an album object in JSON format. On error, the header status code is an error code and the response body contains an error object.</td>
+            </tr>
+
+            <tr>
+              <td>Twitter</td> <td>https://api.twitter.com/1.1/trends/place.json?id=1</td><td>GET</td><td>{
+        "name": "#قل_كلمه_للي_يتابعك",
+        "url": "http://twitter.com/search?q=%23%D9%82%D9%84_%D9%83%D9%84%D9%85%D9%87_%D9%84%D9%84%D9%8A_%D9%8A%D8%AA%D8%A7%D8%A8%D8%B9%D9%83",
+        "promoted_content": null,
+        "query": "%23%D9%82%D9%84_%D9%83%D9%84%D9%85%D9%87_%D9%84%D9%84%D9%8A_%D9%8A%D8%AA%D8%A7%D8%A8%D8%B9%D9%83",
+        "tweet_volume": null
+      }</td>
+            </tr>
+          </table>
           </li>
           <li>
             <p>
@@ -396,6 +416,7 @@
       </li>
       <li>
         <p>
+          If the server is generating the html then you always know how the user will see his website regardless of what broswer he is using, whether it be IE or Safari or Chrome. Therefore if it is critical information you may want to assure that they can always consume the resource properly regardless of what JS version they support. On the other hand, this can be very resource intensive in terms of network resources, JSON is much lighter and having the HTML get rendered on the client side will scale better and be much faster. The website will also be able to serve more custom and interactive content. 
         </p>
       </li>
     </ol>
