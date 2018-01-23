@@ -32,7 +32,6 @@ def hello_world():
     '''Responds to http://localhost:8080/hello with an example JSON object
     '''
     response_body = {'Hello': 'World'}
-
     # This returns valid JSON in the response, but does not yet set the
     # associated HTTP response header.  This you should do yourself in your
     # own routes!
