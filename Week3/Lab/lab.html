@@ -393,6 +393,7 @@
       <li>
         <p>
           <!--#2: Matt -->
+          HTTP is a stateless protocol cuz in order to use it you do not have to make any assumptions about what the previous or current state is. Also a server to dishes out requests doesnt attach any special meaning to each requests and each reqet must have enough information to fulfill what it wants. One advantage is that a stateless protocol does not require the server to retain information or status about each user for the duration of multiple requests. One disadvantage is that for page tracking you need to program other features such as cookies.
         </p>
       </li>
       <li>
@@ -402,7 +403,10 @@
       </li>
       <li>
         <p>
-          <!-- #4: Matt -->
+          ENDPOINT GET https://api.spotify.com/v1/albums/{id}
+          HTTP Method is Get for ID's
+          Response Format
+On success, the HTTP status code in the response header is 200 OK and the response body contains an album object in JSON format. On error, the header status code is an error code and the response body contains an error object.
         </p>
       </li>
       <li>
