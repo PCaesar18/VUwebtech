@@ -16,7 +16,7 @@
 # Include more methods/decorators as you use them
 # See http://bottle.readthedocs.org/en/stable/api.html#bottle.Bottle.route
 
-from bottle import response, error, get
+from bottle import response, error, get, post, request
 import json
 
 
@@ -61,9 +61,52 @@ def db_example(db):
     # TODO: add code that checks for errors so you know what went wrong
     # TODO: set the appropriate HTTP headers and HTTP response codes here.
 
-    # Return results as JSON
+    response.content_type = 'application/JSON'
     return json.dumps(android_phones)
+###############################################################################
 
+@get('/find/<os>')
+def db_example(db, os):
+
+    # SQL for finding one
+    db.execute("SELECT * FROM phones WHERE os=?", (os,))
+    fetch_phone = db.fetchone()
+    response.content_type = 'application/JSON'
+    return json.dumps(fetch_phone)
+
+@post('/phones/add')
+def addNew(db):
+    brand= request.forms.get('brand')
+    model = request.forms.get('model')
+    os = request.forms.get('os')
+    image= request.forms.get('image')
+    screensize = request.forms.get('screensize')
+    print brand
+
+    db.execute(""" INSERT INTO phones (brand, model, os, image, screensize)
+                VALUES (?, ?, ?, ?, ?)""",
+               (brand, model, os, image, screensize))
+
+    
+
+
+
+
+
+###############################################################################
+#
+#
+#    from bottle import route, run
+#    @route('/todo')
+    #def todo_list():
+#    c = conn.cursor()
+#    c.execute("SELECT id, task FROM todo WHERE status LIKE '1'") result = c.fetchall()
+#    return str(result)
+#
+#
+#
+#
+###############################################################################
 
 
 
