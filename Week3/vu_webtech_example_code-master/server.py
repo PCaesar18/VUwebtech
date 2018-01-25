@@ -16,7 +16,7 @@
 # Include more methods/decorators as you use them
 # See http://bottle.readthedocs.org/en/stable/api.html#bottle.Bottle.route
 
-from bottle import response, error, get, post, request
+from bottle import response, error, get, post, request, put, route
 import json
 
 
@@ -70,7 +70,9 @@ def db_example(db, os):
 
     # SQL for finding one
     db.execute("SELECT * FROM phones WHERE os=?", (os,))
+    result = db.execute("SELECT * FROM phones WHERE os=?", (os,))
     fetch_phone = db.fetchone()
+
     response.content_type = 'application/JSON'
     return json.dumps(fetch_phone)
 
@@ -87,7 +89,30 @@ def addNew(db):
                 VALUES (?, ?, ?, ?, ?)""",
                (brand, model, os, image, screensize))
 
-    
+
+#@put('replace/<model>')
+#def update(db, model):
+
+#    brand= request.forms.get('brand')
+#    model = request.forms.get('model')
+#    os = request.forms.get('os')
+#    image= request.forms.get('image')
+#    screensize = request.forms.get('screensize')
+#    return "model"
+
+@put('/replace/<model>')
+def edit_item(db, model):
+    brand= request.forms.get('brand')
+    model = request.forms.get('model')
+    os = request.forms.get('os')
+    image= request.forms.get('image')
+    screensize = request.forms.get('screensize')
+
+
+
+
+    db.execute('''UPDATE phones SET brand=?, os=?, image=?, screensize=? WHERE model = ?''', (brand, os, image, screensize, model))
+
 
 
 
