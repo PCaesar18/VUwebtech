@@ -16,7 +16,7 @@
 # Include more methods/decorators as you use them
 # See http://bottle.readthedocs.org/en/stable/api.html#bottle.Bottle.route
 
-from bottle import response, error, get, post, request, put, route
+from bottle import response, error, get, post, request, put, route, delete
 import json
 
 
@@ -110,12 +110,20 @@ def edit_item(db, model):
 
 
 
-
     db.execute('''UPDATE phones SET brand=?, os=?, image=?, screensize=? WHERE model = ?''', (brand, os, image, screensize, model))
 
 
+@delete('/delete/<model>')
+def delete_item(db, model):
+    brand= request.forms.get('brand')
+    model = request.forms.get('model')
+    os = request.forms.get('os')
+    image= request.forms.get('image')
+    screensize = request.forms.get('screensize')
 
 
+
+    db.execute('''DELETE FROM phones  WHERE model = ?''', (brand, os, image, screensize, model))
 
 
 ###############################################################################
