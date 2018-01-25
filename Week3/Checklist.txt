@@ -69,3 +69,30 @@ Students are not required to learn syntactical details of HTTP, Python or Bottle
 The reuse of small code examples found in online tutorials is allowed, as long as students fully understand the copied code, and are able to document the behaviour of the code in their own words.
 
 For the final exam, students need to be able to read, understand and explain fragments of provided code, where the code will be at a level of complexity similar to the complexity of the code in this particular assignment.
+
+
+
+rubrik
+
+Criteria	Ratings	Pts
+This criterion is linked to a learning outcome Understand REST
+You can receive maximum 30 points if you show (in your documentation, implementation, or, ideally, both) that you understand how to apply the key REST concepts to realize the product inventory API. You need to show that you understand how to use (safe and idempotent) HTTP methods where appropriate (20 points) and how to use appropriate response codes (10 points);
+30.0 pts
+
+This criterion is linked to a learning outcome Documentation
+You can receive maximum 20 points if you adequately document the requests your web service expects to receive (including endpoint URIs, HTTP methods, and, if applicable, parameters and posted data); along with the format of its responses (including response codes);
+20.0 pts
+
+This criterion is linked to a learning outcome Implementation
+You can receive maximum 35 points if you correctly implement the required functionality;
+35.0 pts
+
+This criterion is linked to a learning outcome Design & style
+You can receive maximum 15 points for good design and general style. This includes easy to use and remember URI and parameter schemes, layout and readability of your documentation and code, etc.
+15.0 pts
+
+This criterion is linked to a learning outcome Bonus
+Bonus: maximum 10 extra points if you make your assignment 2 submission work with your own server instead of using our server, and extend the user interface to support all CRUD operations (including update, delete).
+10.0 pts
+
+Total points: 110.0
