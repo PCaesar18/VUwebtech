@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>RESTfull API Documentation of </title>
-    <link rel="stylesheet" href="/Users/matthiasdebernardini/github/VUwebtech/Week3/Matthias/css/master.css">
+    <link rel="stylesheet" href="master.css">
   </head>
   <body>
     <h2>Requests</h2>
@@ -79,6 +79,33 @@
       </table>
     <h2>Responses</h2>
       <p>All data is received as a JSON object. The Web API Object Model below provides a description of all the retrievable objects.</p>
+
+      <table cellspacing='0'>
+        <thead>
+          <tr>
+            <th>Response statues</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>200</td>
+            <td>Your request was succesful and the data is succesfully returned </td>
+          </tr><!-- Table Row -->
+          <tr class="even">
+            <td>204</td>
+            <td>Your request was succesful but nothing is returned  </td>
+          </tr><!-- Darker Table Row -->
+          <tr>
+            <td>404</td>
+            <td>The requested source was not found </td>
+          </tr>
+          <tr class="even">
+            <td>500</td>
+            <td>An unexpected  </td>
+          </tr>
+        </tbody>
+      </table>
     <h2>Phone Object Full</h2>
       <table cellspacing='0'>
       <thead>
