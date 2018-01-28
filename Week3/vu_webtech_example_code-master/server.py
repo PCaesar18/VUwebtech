@@ -64,25 +64,43 @@ def db_example(db):
     response.content_type = 'application/JSON'
     return json.dumps(android_phones)
 ###############################################################################
+@get('/find/all')
+def find_all_phones(db):
+
+    if phones == None:
+        abort(404, "The item(s) you requested was not found in the database")
+    else:
+    db.execute("SELECT * FROM phones WHERE os=?", ('Android',))
+    android_phones = db.fetchall() # Use db.fetchone() to get results one by one
+    response.content_type = 'application/JSON'
+    response.status = '200 OK'
+
+    return json.dumps(android_phones)
+
 
 @get('/find/<os>')
-def db_example(db, os):
+def find_phone(db, os):
 
+    if os == None:
+        abort(404, "The item you requested was not found in the database")
+    else:
     # SQL for finding one
     db.execute("SELECT * FROM phones WHERE os=?", (os,))
     result = db.execute("SELECT * FROM phones WHERE os=?", (os,))
     fetch_phone = db.fetchone()
 
     response.content_type = 'application/JSON'
+    response.status = '200 OK'
     return json.dumps(fetch_phone)
 
 @post('/phones/add')
-def addNew(db):
+def add_New(db):
     brand= request.forms.get('brand')
     model = request.forms.get('model')
     os = request.forms.get('os')
     image= request.forms.get('image')
     screensize = request.forms.get('screensize')
+    response.status = '200 OK'
     print brand
 
     db.execute(""" INSERT INTO phones (brand, model, os, image, screensize)
@@ -107,7 +125,7 @@ def edit_item(db, model):
     os = request.forms.get('os')
     image= request.forms.get('image')
     screensize = request.forms.get('screensize')
-
+    response.status = 204
 
 
     db.execute('''UPDATE phones SET brand=?, os=?, image=?, screensize=? WHERE model = ?''', (brand, os, image, screensize, model))
@@ -115,14 +133,15 @@ def edit_item(db, model):
 
 @delete('/delete/<model>')
 def delete_item(db, model):
+    if model == None:
+        abort(404, "The item you requested was not found in the database")
+    else:
     brand= request.forms.get('brand')
     model = request.forms.get('model')
     os = request.forms.get('os')
     image= request.forms.get('image')
     screensize = request.forms.get('screensize')
-
-
-
+    response.status = 204
     db.execute('''DELETE FROM phones  WHERE model = ?''', (brand, os, image, screensize, model))
 
 
@@ -141,8 +160,17 @@ def delete_item(db, model):
 #
 ###############################################################################
 
+@error(404)
+def error404(error):
+    response.status = 404
+    response.content_type = 'application/JSON'
+    response_body = {'status': response.status, 'message': error.body}
 
+    return json.dumps(response_body)
 
+@error(500)
+def error505(code):
+    return 'Oops there is something wrong!'
 ###############################################################################
 # Error handling
 #
