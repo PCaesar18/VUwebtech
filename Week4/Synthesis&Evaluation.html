@@ -21,13 +21,7 @@
   <li>
     Accessibility highlights section providing a short discussion of what you identify to be the WCAG guidelines that are the most relevant to your page (pick 2 or 3) </li>
   <li>
-    Improvement plan section providing a prioritized list of improvement actions to improve your page,
-    in terms of- accessibility and usability (based on Appendix A),-
-    other course learning goals (based on Appendix B)-
-    the selected high lights, and
-    the other material in the appendixes.
-    For each item, describe what you aim to improve, and what modifications in the HTML, CSS or JavaScript are required to realize the improvement (e.g. to improve the user experience in screen readers,
-    HTML alt tags with short texts describing the image need to be added for all img elements).</li>
+    Improvement plan section providing a prioritized list of improvement actions to improve your page, in terms of- accessibility and usability (based on Appendix A),- other course learning goals (based on Appendix B)- the selected high lights, and the other material in the appendixes. For each item, describe what you aim to improve, and what modifications in the HTML, CSS or JavaScript are required to realize the improvement (e.g. to improve the user experience in screen readers, HTML alt tags with short texts describing the image need to be added for all img elements).</li>
   <li>
     Appendix A, & BTables with more detailed information as described above</li>
 <li>
@@ -108,7 +102,7 @@ This is true of our website.
 
 </li>
 <h2> Introduction </h2>
-<p>Our page is intended to be used by anybody that wished to buy a phones. Therefore we made very clear and distinguishable points to read and talk about. The headers for our topics clearly identify what will be talked about so that someone that wants to browse our landing page can easily tell what they are about to read.</p>
+<p>Our page is intended to be used by anybody that wishes to buy a phone. Therefore we made very clear and distinguishable points to read and talk about. The headers for our topics clearly identify what will be talked about so that someone that wants to browse our landing page can easily tell what they are about to read. However, due to initial time constraints, our style markup does unfortunately not include all elements of our webpage. With more time, the page would look 'nicer'. After looking at all the W3C Accessibility Guidelines, we noticed that we complied to most of the guidelines altough unconscious. Overall our webpage is easy to navigate and understand, and is accessible for most, if not all computer users. Yet with a little bit more time, some missing (but not per se neccesairy) style could be further implemented.  </p>
 
 <h2> Accessibility highlights </h2>
  <ul>
@@ -123,13 +117,48 @@ This is true of our website.
 </ul>
 
 <h2> Improvement plan </h2>
-<p>our improvement plan consists of making sure that this website works on phones as best as possible.
-
-Making sure that the relationships work well and it is coherent.
-
-Therefore we will make sure that resizeing is available. That is the most important thing and the only thing that matters.
-
-Also making sure that everything has a heading so that its easy to cycle through.</p>
+<table>
+    <tr>
+      <th>Place of improvement </th><th>Modification for the improvement</th>
+    </tr>
+    <tr>
+      <td>
+        First of all, our grade was significantly reduced in our first assignment because our page was not responsive enough and was hard to view on a mobile device.
+    </td>
+    <td>
+      One option for improvement is to implement a seperate CSS file that is especially made for mobile devices. This file gets triggered as soon as the width of the window gets lower than a certain size (eg width 400px). However, the implementation of this would be very tedious and would take a long time. Another option would be to change the current CSS file and include for example 'if statements' where the width gets below a certain size, then the if statement is triggered, or the style in the webpage is adapated to be able to handle both laptop and mobile devices in one CSS page. 
+    </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td> </td>
+    </tr>
+    <tr>
+      <td></td>
+        <td></td>
+    </tr>
+    <tr>
+     <td> Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.
+       <ol>
+        <li>2.1.1 Keyboard:  </li>
+        <li> 2.1.2 No Keyboard Trap: </li>
+        <li> 2.1.3 Keyboard (No Exception):</li>
+       </ol>
+     </td>
+     <td>
+       <ol>
+          <li><p>Our webpage fully complies with this guideline but at the same time is not very relevant to our webpage. This guideline is important for interactive features such as a drag and drop feature or a drawing program. Since this kind of functionality is not present on our webpage, the guideline is not very relevant. Altough we comply with this guideline at the same time because all the  functionalities can be accessible through a keyboard. </p> </li>
+          <li> <p>While this guideline is difficult to test on our webpage, there could be some issues where a keyboard would get 'trapped' in a loop on our webpage. This could happen on either of the two tables on our webpage. Since they are enhanced with a Javascript function, the function could interfere with the linear flow of the webpage and disable the user of using his keyboard to operate out of the table. Again, this is a possibility but is hard to verify.</p> </li>
+          <li> <p>This refers back to the previously mentioned guideline 2.1.1. Our website does indeed comply with the statement that all content must be operatable trough the keyboard. Altough as previously mentioned, the Javascript functionality might prove some difficulties. Nowhere on webpage is the user dependant on the path he/she takes.</p></li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+     <td></td>
+       <td></td>
+    </tr>
+</table>
 
 <h2> Appendices </h2>
 
